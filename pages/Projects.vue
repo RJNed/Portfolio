@@ -1,7 +1,9 @@
 <template>
     <div class="container">
         <div class="projects-background">
-            <div class="details"><h1>Projects</h1></div>
+            <div class="details"><h1>Projects</h1>
+              <ProjectCard/>
+            </div>
             
         </div>
     </div>
