@@ -1,8 +1,8 @@
 <template>
   <div class="background-container">
     <div class="content-container">
-      <h2>Contact Information</h2>
       <div class="contact-card">
+        <h2>Contact Information</h2>
         <address class="contact-info">
           <p><strong>Name:</strong> Ryan Nedbalek</p>
           <p><strong>Email:</strong> 
@@ -25,7 +25,7 @@
 
       <!-- Contact Form -->
       <div class="form-card">
-        <h3>Send a Message</h3>
+        <h2>Send a Message</h2>
         <form @submit.prevent>
           <div class="form-group">
             <label for="name">Name</label>
@@ -44,10 +44,10 @@
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Your message here..."></textarea>
+            <textarea id="message" rows="5"  placeholder="Your message here..." v-model=contactMessage></textarea>
           </div>
 
-          <button type="submit">Send</button>
+          <button type="submit" @click=handleMessage>Send</button>
         </form>
       </div>
     </div>
@@ -55,22 +55,23 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+const contactMessage = ref('');
+  
+  const handleMessage = () => {
+    alert(`${contactMessage.value}`);
+    // Add logic for actual emailing functionality below
+  };
 </script>
 
 <style scoped>
 /* General Headings */
 h2 {
-  color: #fcfcc0;
+  color: #060606;
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 22px;
-  text-align: center;
-  margin-bottom: 15px;
-  color: #000;
 }
 
 /* Layout */
@@ -78,11 +79,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
   background-color: #282828;
-  overflow: hidden;
-  padding: 40px 20px;
+  /*overflow: hidden;*/
 }
 
 .background-container::before {
@@ -99,10 +99,14 @@ h3 {
 
 .content-container {
   position: relative;
+  display: flex;
   z-index: 1;
   width: 100%;
-  max-width: 600px;
-  margin: auto;
+  max-width: 1000px;
+  height:500px;
+  margin-top: 10px;
+  justify-content: space-between;
+  gap: 25px;
 }
 
 /* Contact Card */
@@ -112,6 +116,10 @@ h3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 25px;
   margin-bottom: 30px;
+  min-width: 250px;
+  width: 400px;
+  max-width: 600px;
+  height: 100%;
 }
 
 .contact-info {
@@ -157,6 +165,8 @@ h3 {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 25px;
+  width: 600px;
+  height: 100%;
 }
 
 form {
