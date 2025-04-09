@@ -6,6 +6,7 @@
         <h1>Featured Projects</h1>
         <!-- Hero Section -->
         <div class="home-carousel-container">
+          <!-- need to implement project routing based off of current image -->
           <ImageCarousel />
         </div>
       </div>
@@ -206,7 +207,6 @@ import ImageCarousel from '@/components/ImageCarousel.vue';
   width: 800px;
   margin-top: 40px;
   padding: 10px 20px;
-  background: rgba(0, 0, 0, 1);
   color: white;
   text-align: center;
   border-radius: 5px;

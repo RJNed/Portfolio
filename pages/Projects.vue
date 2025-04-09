@@ -4,10 +4,19 @@
           <div class="details">
               <h1>Projects</h1>
               <!--image currently not imported properly-->
+
+              <!--need to implement store base rendering of information-->
+                
+
+              <!--do we need to implement a database to handle project and documentation? -->
+                <!-- no dont **need** a database -->
+                  <!-- cleaner code and best practice -->
+              <a class="projectLink" href="/testPage"> 
               <projectCard
               image = "C:\Users\Ryan\Desktop\Portfolio\Portfolio\src\DemoVendors\Shop2.jpg"
               name = "Project Test"
               description = "Testing if this works"/>
+              </a>
         </div>
         </div>
     </div>
@@ -38,6 +47,10 @@ import projectCard from '~/components/projectCard.vue';
   opacity: 0.25;
   background-attachment: fixed;
   z-index: 0;
+}
+
+.projectLink {
+  text-decoration-line: none;
 }
 
 .details {
