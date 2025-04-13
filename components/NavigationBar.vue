@@ -2,7 +2,7 @@
     <nav class="navbar">
       <!-- Logo or Brand -->
       <div class="brand">
-        <a href="/ "><img :src=logo></img></a>
+        <a href="/ "><img src="../src/Logos/Portfolio icon.png"></img></a>
       </div>
       
       <!-- Navigation Links -->
@@ -27,7 +27,6 @@
   
   <script setup>
   import { ref } from 'vue';
-  import logo from '/src/Logos/Portfolio icon.png';
   
   const searchQuery = ref('');
   

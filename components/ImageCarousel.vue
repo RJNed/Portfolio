@@ -32,12 +32,12 @@
   
   <script setup lang="ts">
   import { ref, onMounted, onUnmounted } from 'vue';
-  import Shop1 from '/src/DemoVendors/Shop1.jpg';
-  import Shop2 from '/src/DemoVendors/Shop2.jpg';
-  import Shop3 from '/src/DemoVendors/Shop3.jpg';
-  import Shop4 from '/src/DemoVendors/Shop4.jpg';
-  import Shop5 from '/src/DemoVendors/Shop5.jpg';
-  import Shop6 from '/src/DemoVendors/Shop6.jpg';
+  import Shop1 from '../src/DemoVendors/Shop1.jpg';
+  import Shop2 from '../src/DemoVendors/Shop2.jpg';
+  import Shop3 from '../src/DemoVendors/Shop3.jpg';
+  import Shop4 from '../src/DemoVendors/Shop4.jpg';
+  import Shop5 from '../src/DemoVendors/Shop5.jpg';
+  import Shop6 from '../src/DemoVendors/Shop6.jpg';
 
   const images = [Shop1, Shop2, Shop3, Shop4, Shop5, Shop6];
 
