@@ -5,7 +5,7 @@
               <h1>Documentation</h1>
               <a class="projectLink" href="/testPage"> 
                 <DocCard
-                image = "C:\Users\Ryan\Desktop\Portfolio\Portfolio\src\DemoVendors\Shop2.jpg"
+                image = "C:\Users\Ryan\Desktop\Porfolio\src\DemoVendors\Shop2.jpg"
                 name = "Project Test"
                 description = "Testing if this works"/>
               </a>
