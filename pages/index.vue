@@ -1,6 +1,17 @@
 <template>
   <div class="home-background">
     <div class="home-overlay">
+      <div class="message">
+        <p>NOTICE: This website is under construction and many features are not complete.</p>
+        <p>Here is a list of features to be added in the future:</p>
+      </div>
+      <div class="bullets">
+        <li>Search and filtering</li>
+        <li>Project and Documentation page content</li>
+        <li>Better page scaling for any device</li>
+        <li>Updated page styling</li>
+      </div>
+      <p>If you have suggestions for features feel free to <a class='bulletref' href="/Contact-Page">contact</a> me!</p>
       <!-- Featured Vendors Banner -->
       <div class="featured-projects-banner">
         <h1>Featured Projects</h1>
@@ -10,7 +21,6 @@
           <ImageCarousel />
         </div>
       </div>
-
       <!-- Featured Projects Section -->
       <section id="projects" class="home-section">
         <h2>Project Categories</h2>
@@ -62,6 +72,17 @@ import ImageCarousel from '@/components/ImageCarousel.vue';
 </script>
 
 <style scoped>
+.message{
+  text-align: center;
+}
+
+.bullets{
+  text-align: left;
+}
+
+.bulletref{
+  color:#00aaff
+}
 /* Reset default margins and padding for the entire page */
 .home-background {
   position: relative;

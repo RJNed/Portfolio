@@ -13,7 +13,7 @@
                   <div class="team-member">
                       <img src="/images/ryancartoon.png" alt="Team Member 3">
                       <h3>Ryan Nedbalek</h3>
-                      <p>A passionate computer enthusiast and software developer with a curiosity for all things tech. 
+                      <p>A passionate IT professional and software developer with a curiosity for all things tech. 
                       I love building, problem-solving, and experimenting. 
                       My portfolio showcases the projects that push me to learn, create, and refine my craft—one challenge at a time.</p>
                   </div>
@@ -51,8 +51,8 @@
                 </div>
 
                 <div class="job">
-                  <h3>Software Developer</h3>
-                  <p><em>Hylio, Inc. | Houston, TX | 09/2023 - 12/2023</em></p>
+                  <h3>Software Developer (Contracted)</h3>
+                  <p><em>Hylio, Inc. | Houston, TX | 09/2023 - 12/2023 </em></p>
                   <ul>
                     <li>Developed and implemented Vue 3 components for a scalable front-end architecture.</li>
                     <li>Integrated TypeScript to enhance code maintainability and performance.</li>
