@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Project</h1>
+        <h1>Page under construction</h1>
     </div>
 </template>
 
