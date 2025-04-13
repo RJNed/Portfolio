@@ -2,8 +2,8 @@
     <div class="cardContainer">
       <div class = "imageSection">
         <h3 class="projectName">{{ name }}</h3>
-        <!--<img :src="image" :alt="name" class="projectPreview" /> -->
-        <img src="C:\Users\Ryan\Desktop\Porfolio\src\DemoVendors\Shop2.jpg" :alt="name" class="projectPreview" />
+        <img :src="image" :alt="name" class="projectPreview" />
+        <!-- <img src="C:\Users\Ryan\Desktop\Porfolio\src\DemoVendors\Shop2.jpg" :alt="name" class="projectPreview" /> -->
       </div>
       <div class="descriptionSection">
         <p class="projectDescription">{{ description }}</p>
