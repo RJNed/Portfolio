@@ -37,7 +37,7 @@ h1{
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('../src/Background/Pexels.jpg');
+  background-image: url('../src/Background/pexels.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.25;

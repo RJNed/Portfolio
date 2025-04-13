@@ -11,7 +11,7 @@
               <h2>Who I am</h2>
               <div class="team">
                   <div class="team-member">
-                      <img src="../src/People/RyanCartoon.png" alt="Team Member 3">
+                      <img src="../src/People/ryancartoon.png" alt="Team Member 3">
                       <h3>Ryan Nedbalek</h3>
                       <p>A passionate computer enthusiast and software developer with a curiosity for all things tech. 
                       I love building, problem-solving, and experimenting. 
@@ -171,7 +171,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../src/Background/Pexels.jpg'); /* Path to your background image */
+  background-image: url('../src/Background/pexels.jpg'); /* Path to your background image */
   background-size: cover;
   background-position: center;
   opacity: 0.25; /* Background opacity at 25% */
