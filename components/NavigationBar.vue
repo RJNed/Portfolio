@@ -31,7 +31,8 @@
   const searchQuery = ref('');
   
   const handleSearch = () => {
-    alert(`Searching for: ${searchQuery.value}`);
+    alert(`Search functionality is currently under construction`);
+    // alert(`Searching for: ${searchQuery.value}`);
     // Add logic for actual search functionality here
   };
   </script>
