@@ -2,7 +2,7 @@
     <nav class="navbar">
       <!-- Logo or Brand -->
       <div class="brand">
-        <a href="/ "><img src="../src/Logos/portfolio-icon.png"></img></a>
+        <a href="/ "><img src="/imagesportfolio-icon.png"></img></a>
       </div>
       
       <!-- Navigation Links -->
