@@ -93,6 +93,19 @@
 
 
 <script setup>
+useHead({
+  title: 'About Me | Ryan Nedbalek',
+  meta: [
+    { name: 'description', content: 'Learn about Ryan Nedbalek’s background, interests, and professional journey in software and robotics.' },
+    { property: 'og:title', content: 'About Me | Ryan Nedbalek' },
+    { property: 'og:description', content: 'Discover Ryan’s personal story, education, and experience.' },
+    { property: 'og:image', content: '/images/portfolio-icon.jpg' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.ryannedbalek.com/AboutMe' }
+  ]
+})
 </script>
 
 <style scoped>

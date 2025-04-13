@@ -69,6 +69,21 @@
 
 <script setup lang="ts">
 import ImageCarousel from '@/components/ImageCarousel.vue';
+
+useHead({
+  title: 'Ryan Nedbalek | Developer & Engineer',
+  meta: [
+    { name: 'description', content: 'Portfolio of Ryan Nedbalek — developer, product engineer, and robotics enthusiast. Showcasing personal projects, tech experiments, and creative problem solving.' },
+    { name: 'keywords', content: 'Ryan Nedbalek, developer, portfolio, Nuxt, Vue, robotics, product engineer, TypeScript, Node.js, home lab, web development' },
+    { property: 'og:title', content: 'Ryan Nedbalek | Developer Portfolio' },
+    { property: 'og:description', content: 'Explore Ryan’s personal projects and engineering work, from web development to robotics.' },
+    { property: 'og:image', content: '/images/portfolio-icon.jpg' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.ryannedbalek.com' }
+  ]
+})
 </script>
 
 <style scoped>
