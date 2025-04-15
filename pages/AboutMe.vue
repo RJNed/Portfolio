@@ -120,7 +120,7 @@ header h1 {
   margin: 0;
 }
 
-header p{
+header p {
   margin: 0;
   padding-top: 10px;
 }
@@ -136,10 +136,10 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.85);
-  width: 250px;
+  width: 100%;
   display: flex;
-  justify-content: space-around; /* Ensure even spacing between team members */
-  flex-wrap: wrap; /* Allows wrapping if needed */
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
@@ -147,17 +147,19 @@ h2 {
 
 .team-member {
   text-align: center;
+  max-width: 250px;
 }
 
 .team-member img {
   width: 90%;
   border-radius: 50%;
-  border: 1px solid #000000; /* Added `border-style: solid` */
+  border: 1px solid #000;
   margin-bottom: 15px;
 }
-.team:hover{
-    transform: translateY(-10px);
-    transition: all 0.5s ease;
+
+.team:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
 }
 
 p {
@@ -168,53 +170,52 @@ p {
 
 .background-container {
   position: relative;
+  display: flex;
   justify-content: center;
-  height: 100vw;
-  width: 100vw;
+  width: 100%;
+  min-height: 100vh;
   align-items: center;
-  overflow: hidden; /* Ensures the background is contained */
+  overflow: hidden;
   background-color: #282828;
 }
 
-/* Apply opacity to the background using ::before */
 .background-container::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/images/pexels.jpg'); /* Path to your background image */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('/images/pexels.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.25; /* Background opacity at 25% */
-  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  opacity: 0.25;
+  background-attachment: fixed;
   z-index: 0;
 }
-
 
 .content-container {
   position: relative;
   display: flex;
-  justify-content: space-between; /* Space sections evenly */
-  align-items: flex-start; /* Align items to the top */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   z-index: 1;
-  width: 90%; /* Prevents it from stretching too much */
-  margin: 20px auto; /* Centers the container */
-  gap: 30px; /* Space between sections */
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .whoSection {
-  position: relative;
-  padding: 5px;
-  max-width: 450px;
+  flex: 1 1 100%;
+  max-width: 250px;
   margin: 0 auto;
-  color:black
+  padding: 5px;
+  color: black;
 }
 
-/* Right Section */
 .rightSection {
-  flex: 1; /* Takes available space */
+  flex: 2;
+  min-width: 300px;
   padding: 5px;
   border-radius: 8px;
   color: black;
@@ -222,21 +223,21 @@ p {
 }
 
 .rightBackground {
-  background: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 25px;
 }
 
 .rightContent {
-  color: #000; /* Ensures text is fully visible */
+  color: #000;
   padding: 20px;
   text-align: left;
 }
 
 .rightContent h2 {
   color: #22345f;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #000;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -261,10 +262,50 @@ p {
 
 .job p {
   font-style: italic;
-  color: #1c1c1c; /* Darker for better readability */
+  color: #1c1c1c;
 }
 
 .job ul {
   padding-left: 20px;
+}
+
+/* Mobile & tablet responsiveness */
+@media (max-width: 1024px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whoSection,
+  .rightSection {
+    max-width: 100%;
+  }
+
+  .team {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  p, .job p {
+    font-size: 1rem;
+  }
+
+  .rightContent {
+    padding: 10px;
+  }
+
+  .rightContent h2 {
+    font-size: 1.2rem;
+  }
+
+  .job h3 {
+    font-size: 1.1rem;
+  }
 }
 </style>
