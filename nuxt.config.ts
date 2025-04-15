@@ -5,9 +5,4 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
   devtools: { enabled: false },
   css: ['@/assets/css/global.css'],
-  runtimeConfig: {
-    public: {
-      apiBase: 'http://localhost:4000/api'  // Base URL for your API
-    }
-  }
 })

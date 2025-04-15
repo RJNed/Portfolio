@@ -40,8 +40,8 @@ h1{
 .doc-background {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 90vh;
+  height: 100vw;
+  width: 100vw;
   position: relative;
   background-color: #282828;
   overflow: hidden;
@@ -64,7 +64,7 @@ h1{
 }
 
 .details {
-  margin-top: -250px;
+  margin-top: 20px;
   text-align: center;
   align-items: center;
   padding: 5px;

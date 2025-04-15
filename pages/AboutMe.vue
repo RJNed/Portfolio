@@ -168,9 +168,9 @@ p {
 
 .background-container {
   position: relative;
-  height: 100%; /* Ensures the container takes the full viewport height */
-  width: 100%;
   justify-content: center;
+  height: 100vw;
+  width: 100vw;
   align-items: center;
   overflow: hidden; /* Ensures the background is contained */
   background-color: #282828;

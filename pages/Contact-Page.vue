@@ -114,8 +114,8 @@ h2 {
 .background-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 90vh;
+  height: 100vw;
+  width: 100vw;
   position: relative;
   background-color: #282828;
 }
@@ -137,7 +137,7 @@ h2 {
   width: 100%;
   max-width: 1000px;
   height:500px;
-  margin-top: 10px;
+  margin-top: 100px;
   justify-content: space-between;
   gap: 25px;
 }

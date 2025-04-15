@@ -87,25 +87,26 @@ useHead({
 </script>
 
 <style scoped>
-.message{
+.message {
   text-align: center;
+  padding: 1rem;
 }
 
-.bullets{
+.bullets {
   text-align: left;
+  padding-left: 1.5rem;
 }
 
-.bulletref{
-  color:#00aaff
+.bulletref {
+  color: #00aaff;
 }
-/* Reset default margins and padding for the entire page */
+
 .home-background {
   position: relative;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
   background-color: #282828;
 }
@@ -134,45 +135,40 @@ useHead({
   text-align: center;
   color: white;
   padding: 20px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-/* Featured Projects Banner */
-.featured-projects-banner {
-  background: rgb(181, 181, 181);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.featured-projects-banner h1 {
-  font-size: 3rem;
-  color: #000;
-  margin: 0;
-}
-
-/* Sections */
-.home-section {
-  margin: 40px 0;
-  padding: 20px;
-  background: rgb(181, 181, 181);
-  border-radius: 10px;
-  color: #333;
+.featured-projects-banner,
+.home-section,
+.home-cta,
+.home-footer {
+  width: 90%;
   max-width: 800px;
-  text-align: center;
+  margin: 1rem auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.home-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #0c0c0c;
+.featured-projects-banner,
+.home-section {
+  background: rgb(181, 181, 181);
+  color: #333;
+}
+
+.featured-projects-banner h1,
+.home-section h2,
+.home-cta h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin: 0 0 1rem;
 }
 
 .project-cards {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  margin-top: 20px;
 }
 
 .project-card {
@@ -180,7 +176,8 @@ useHead({
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   text-align: center;
 }
 
@@ -202,29 +199,18 @@ useHead({
   font-weight: bold;
 }
 
-/* Call to Action */
 .home-cta {
-  width: 800px;
-  max-width: 800px;
-  margin: 40px 0;
-  padding: 20px;
   background: #0044cc;
   color: white;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.home-cta h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
 }
 
 .home-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .cta-button {
+  display: inline-block;
   text-decoration: none;
   background: #00aaff;
   color: white;
@@ -238,21 +224,17 @@ useHead({
   background: #0077b6;
 }
 
-/* Footer */
 .home-footer {
-  width: 800px;
-  margin-top: 40px;
-  padding: 10px 20px;
   color: white;
   text-align: center;
-  border-radius: 5px;
 }
 
 .footer-links {
-  margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  margin-top: 10px;
 }
 
 .footer-links a {
@@ -260,4 +242,60 @@ useHead({
   color: #00aaff;
   font-size: 0.9rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .featured-projects-banner h1,
+  .home-section h2,
+  .home-cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-overlay {
+    padding: 10px;
+  }
+
+  .featured-projects-banner,
+  .home-section,
+  .home-cta,
+  .home-footer {
+    padding: 15px;
+  }
+
+  .featured-projects-banner h1,
+  .home-section h2,
+  .home-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .bulletref {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
 </style>
