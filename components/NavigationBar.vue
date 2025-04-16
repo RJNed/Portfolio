@@ -19,7 +19,7 @@
       <div class="search-container">
         <input type="text" placeholder="Looking for..." v-model="searchQuery" />
         <button @click="handleSearch">
-          <i class="fas fa-search">search</i> 
+          <i class="searchbtn">search</i> 
         </button>
       </div>
     </nav>
@@ -104,7 +104,7 @@
     padding: 5px 10px;
     border: none;
     border-radius: 4px;
-    width: 300px;
+    width: 100%;
     height: 25px;
   }
   
@@ -113,18 +113,20 @@
     color: black;
     border: none;
     border-radius: 4px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     margin-left: 5px;
     cursor: pointer;
     height: 35px;
+    width: 25%;
   }
   
   .search-container button:hover {
     background-color: #fda015;
   }
   
-  .fas.fa-search {
+  .searchbtn {
     font-size: 16px;
+    text-align: center;
   }
 
   /* Responsive Design */
@@ -138,5 +140,6 @@
       display: flex; /* Show links when hovered */
     }
   }
+
 
   </style>

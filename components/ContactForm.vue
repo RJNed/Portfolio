@@ -63,7 +63,6 @@
   </script>
   
   <style scoped>
-  /* You can keep the styles or move shared ones into a global css file */
   .form-card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
@@ -112,5 +111,16 @@
   button[type="submit"]:hover {
     background-color: #444;
   }
+
+
+  @media (max-width: 768px) {
+    .form-card {
+    padding: 25px;
+    width: 450px;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  }
+
   </style>
   

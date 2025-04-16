@@ -32,9 +32,8 @@ useHead({
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  padding: 100px 20px;
   position: relative;
   background-color: #282828;
 }
@@ -61,12 +60,17 @@ useHead({
   max-width: 1000px;
   width: 100%;
   justify-content: center;
+  margin-top: 100px;
 }
 
 @media (max-width: 768px) {
   .content-container {
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
   }
+
 }
+
+
 </style>

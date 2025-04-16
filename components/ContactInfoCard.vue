@@ -27,6 +27,7 @@
   </script>
   
   <style scoped>
+
   .contact-card {
     background: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
@@ -48,6 +49,10 @@
   .contact-info a {
     color: #000;
     text-decoration: underline;
+  }
+
+  h2 {
+    text-align: center;
   }
   
   .social-links {
@@ -75,7 +80,15 @@
   }
   
   @media (max-width: 768px) {
+    .contact-card {
+      padding: 25px;
+      min-width: 250px;
+      width: 450px;
+      min-height: 100%;
+    }
+    
     .contact-info { font-size: 16px; }
+    
     .social-links a { font-size: 16px; padding: 8px 12px; }
   }
   </style>
