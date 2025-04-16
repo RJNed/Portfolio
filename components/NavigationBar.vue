@@ -56,7 +56,7 @@
   }
   
   .brand img{
-    width: 100%;
+    width: 100px;
     height: 75px;
     padding-left: 10px;
     transition: all 0.5s ease;
