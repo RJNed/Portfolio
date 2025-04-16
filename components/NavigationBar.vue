@@ -117,7 +117,7 @@
     margin-left: 5px;
     cursor: pointer;
     height: 35px;
-    width: 25%;
+    width: 50%;
   }
   
   .search-container button:hover {
@@ -139,7 +139,6 @@
     .navbar:hover .nav-links {
       display: flex; /* Show links when hovered */
     }
-
   }
 
 
