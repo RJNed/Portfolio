@@ -139,6 +139,7 @@
     .navbar:hover .nav-links {
       display: flex; /* Show links when hovered */
     }
+
   }
 
 

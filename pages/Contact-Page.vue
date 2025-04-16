@@ -72,5 +72,14 @@ useHead({
 
 }
 
+@media (max-width: 525px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+}
+
 
 </style>

@@ -122,5 +122,12 @@
   }
   }
 
+  @media (max-width: 525px) {
+    .form-card {
+    padding: 15px;
+    width: 300px;
+    height: 100%;
+  }
+  }
   </style>
   

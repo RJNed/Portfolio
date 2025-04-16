@@ -33,7 +33,6 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     padding: 25px;
-    min-width: 250px;
     width: 400px;
     max-width: 600px;
     min-height: 100%;
@@ -82,7 +81,6 @@
   @media (max-width: 768px) {
     .contact-card {
       padding: 25px;
-      min-width: 250px;
       width: 450px;
       min-height: 100%;
     }
@@ -91,5 +89,13 @@
     
     .social-links a { font-size: 16px; padding: 8px 12px; }
   }
+
+  @media (max-width: 525px){
+    .contact-card {
+      padding: 15px;
+      width: 300px;
+      min-height: 100%;
+    }
+}
   </style>
   
