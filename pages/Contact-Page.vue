@@ -18,7 +18,7 @@ useHead({
     { name: 'keywords', content: 'contact Ryan Nedbalek, developer contact, freelance web developer, portfolio contact form, email form' },
     { property: 'og:title', content: 'Contact | Ryan Nedbalek' },
     { property: 'og:description', content: 'Reach out to Ryan through the contact form for project inquiries, tech talks, or networking.' },
-    { property: 'og:image', content: '/images/portfolio-icon.jpg' },
+    { property: 'og:image', content: '/images/portfolio-icon.png' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [

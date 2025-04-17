@@ -77,7 +77,7 @@ useHead({
     { name: 'keywords', content: 'Ryan Nedbalek, developer, portfolio, Nuxt, Vue, robotics, product engineer, TypeScript, Node.js, home lab, web development' },
     { property: 'og:title', content: 'Ryan Nedbalek | Developer Portfolio' },
     { property: 'og:description', content: 'Explore Ryan’s personal projects and engineering work.' },
-    { property: 'og:image', content: '/images/portfolio-icon.jpg' },
+    { property: 'og:image', content: '/images/portfolio-icon.png' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [

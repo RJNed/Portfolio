@@ -99,7 +99,7 @@ useHead({
     { name: 'description', content: 'Learn about Ryan Nedbalek’s background, interests, and professional journey.' },
     { property: 'og:title', content: 'About Me | Ryan Nedbalek' },
     { property: 'og:description', content: 'Discover Ryan’s personal story, education, and experience.' },
-    { property: 'og:image', content: '/images/portfolio-icon.jpg' },
+    { property: 'og:image', content: '/images/portfolio-icon.png' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [

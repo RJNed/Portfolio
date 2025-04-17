@@ -23,7 +23,7 @@ useHead({
     { name: 'keywords', content: 'project documentation, Ryan Nedbalek, developer docs, portfolio documentation, Nuxt project docs, Vue, software architecture' },
     { property: 'og:title', content: 'Project Documentation | Ryan Nedbalek' },
     { property: 'og:description', content: 'Explore the detailed documentation behind Ryan’s projects — planning, code breakdowns, tools used, and lessons learned.' },
-    { property: 'og:image', content: '/images/portfolio-icon.jpg' },
+    { property: 'og:image', content: '/images/portfolio-icon.png' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [

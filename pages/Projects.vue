@@ -32,7 +32,7 @@ useHead({
     { name: 'keywords', content: 'Ryan Nedbalek projects, portfolio projects, web development, Vue projects, Nuxt apps, home lab, engineering projects' },
     { property: 'og:title', content: 'Projects | Ryan Nedbalek' },
     { property: 'og:description', content: 'Explore a curated list of Ryan’s featured projects with documentation, source code, and real-world applications.' },
-    { property: 'og:image', content: '/images/portfolio-icon.jpg' },
+    { property: 'og:image', content: '/images/portfolio-icon.png' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
