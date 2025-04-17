@@ -96,6 +96,7 @@ const handleSearch = () => {
 }
 .searchbtn {
   font-size: 16px;
+  color: black;
 }
 
 /* Hamburger */

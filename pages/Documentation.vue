@@ -20,7 +20,7 @@ useHead({
   title: 'Project Documentation | Ryan Nedbalek',
   meta: [
     { name: 'description', content: 'Technical documentation for Ryan Nedbalek’s projects. Dive into the planning, tools, architecture, and code behind each build.' },
-    { name: 'keywords', content: 'project documentation, Ryan Nedbalek, developer docs, portfolio documentation, Nuxt project docs, Vue, robotics, software architecture' },
+    { name: 'keywords', content: 'project documentation, Ryan Nedbalek, developer docs, portfolio documentation, Nuxt project docs, Vue, software architecture' },
     { property: 'og:title', content: 'Project Documentation | Ryan Nedbalek' },
     { property: 'og:description', content: 'Explore the detailed documentation behind Ryan’s projects — planning, code breakdowns, tools used, and lessons learned.' },
     { property: 'og:image', content: '/images/portfolio-icon.jpg' },

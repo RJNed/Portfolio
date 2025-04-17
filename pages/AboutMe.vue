@@ -96,7 +96,7 @@
 useHead({
   title: 'About Me | Ryan Nedbalek',
   meta: [
-    { name: 'description', content: 'Learn about Ryan Nedbalek’s background, interests, and professional journey in software and robotics.' },
+    { name: 'description', content: 'Learn about Ryan Nedbalek’s background, interests, and professional journey.' },
     { property: 'og:title', content: 'About Me | Ryan Nedbalek' },
     { property: 'og:description', content: 'Discover Ryan’s personal story, education, and experience.' },
     { property: 'og:image', content: '/images/portfolio-icon.jpg' },

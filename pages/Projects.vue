@@ -29,7 +29,7 @@ useHead({
   title: 'Projects | Ryan Nedbalek',
   meta: [
     { name: 'description', content: 'Browse Ryan Nedbalek’s personal and professional projects — including software, web apps, 3D modeling, and IT infrastructure builds.' },
-    { name: 'keywords', content: 'Ryan Nedbalek projects, portfolio projects, web development, robotics, Vue projects, Nuxt apps, home lab, engineering projects' },
+    { name: 'keywords', content: 'Ryan Nedbalek projects, portfolio projects, web development, Vue projects, Nuxt apps, home lab, engineering projects' },
     { property: 'og:title', content: 'Projects | Ryan Nedbalek' },
     { property: 'og:description', content: 'Explore a curated list of Ryan’s featured projects with documentation, source code, and real-world applications.' },
     { property: 'og:image', content: '/images/portfolio-icon.jpg' },
