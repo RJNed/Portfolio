@@ -132,7 +132,7 @@ const handleSearch = () => {
 }
 
 /* Responsive Layout */
-@media (max-width: 972px) {
+@media (max-width: 978px) {
   .navbar {
     flex-direction: row;
     flex-wrap: wrap;
