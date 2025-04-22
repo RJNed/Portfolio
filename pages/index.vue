@@ -73,7 +73,7 @@ import ImageCarousel from '@/components/ImageCarousel.vue';
 useHead({
   title: 'Ryan Nedbalek | Software Developer ',
   meta: [
-    { name: 'description', content: 'Portfolio of Ryan Nedbalek — Software Developer, product engineer, and IT professinoal. Showcasing personal projects, tech experiments, and creative problem solving.' },
+    { name: 'description', content: 'Portfolio of Ryan Nedbalek — Software developer, product engineer, and IT professinoal. Showcasing personal projects, tech experiments, and creative problem solving.' },
     { name: 'keywords', content: 'Ryan Nedbalek, developer, portfolio, Nuxt, Vue, robotics, product engineer, TypeScript, Node.js, home lab, web development' },
     { property: 'og:title', content: 'Ryan Nedbalek | Developer Portfolio' },
     { property: 'og:description', content: 'Explore Ryan’s personal projects and engineering work.' },
