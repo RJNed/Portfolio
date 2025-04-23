@@ -1,29 +1,24 @@
 <template>
-    <div class="container">
-        <div class="projects-background">
-          <div class="details">
-              <h1>Projects</h1>
-              <!--image currently not imported properly-->
-
-              <!--need to implement store base rendering of information-->
-                
-
-              <!--do we need to implement a database to handle project and documentation? -->
-                <!-- no dont **need** a database -->
-                  <!-- cleaner code and best practice -->
-              <a class="projectLink" href="/testPage"> 
+    <div class="projects-background">
+      <div class="project-overlay">
+        <div class="details">
+          <h1>Projects</h1>
+          <div v-for="project in projects" :key="project.id">
               <projectCard
-              image = ""
-              name = "Project Test"
-              description = "Testing if this works"/>
-              </a>
+                :image="project.image"
+                :name="project.name"
+                :description="project.description"
+                :slug="project.slug"
+              />
+          </div>
         </div>
-        </div>
+      </div>
     </div>
 </template>
 
 <script setup>
-import projectCard from '~/components/projectCard.vue';
+import projectCard from '~/components/projectCard.vue'
+import projects from '~/data/projects.json' // JSON file import
 
 useHead({
   title: 'Projects | Ryan Nedbalek',
@@ -41,12 +36,13 @@ useHead({
 })
 </script>
 
+
 <style scoped>
 .projects-background {
   display: flex;
   justify-content: center;
-  height: 100vw;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: relative;
   background-color: #282828;
   overflow: hidden;
@@ -64,15 +60,27 @@ useHead({
   z-index: 0;
 }
 
-.projectLink {
-  text-decoration-line: none;
+.project-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* color: white;
+  margin:5px;
+  padding: 20px; */
+  width: 100%;
+  max-width: 1000px;
 }
 
 .details {
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 40px;
   text-align: center;
   align-items: center;
-  padding: 5px;
+  /* padding: 5px; */
   color:#fcfcc0;
 }
 

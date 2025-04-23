@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Portfolio Website",
+    "slug": "portfolio",
+    "doc": "documentation",
+    "description": "A Nuxt-based portfolio...",
+    "image": "/images/Maintenance.png"
+  },
+  {
+    "id": 2,
+    "name": "Placeholder 1",
+    "slug": "Placeholder 1",
+    "doc": "Placeholder Documentation",
+    "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "image": "/images/Placeholder1.png"
+  },
+  {
+    "id": 3,
+    "name": "Placeholder 2",
+    "slug": "task-tracker-api",
+    "doc": "Placeholder Documentation",
+    "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "image": "/images/Placeholder2.png"
+  },
+  {
+    "id": 4,
+    "name": "Placeholder 3",
+    "slug": "robobot-simulator",
+    "doc": "Placeholder Documentation",
+    "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "image": "/images/Placeholder3.png"
+  },
+  {
+    "id": 5,
+    "name": "Placeholder 4",
+    "slug": "network-monitor-tool",
+    "doc": "Placeholder Documentation",
+    "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "image": "/images/Placeholder4.png"
+  },
+  {
+    "id": 6,
+    "name": "Placeholder 5",
+    "slug": "lunar-phase-tracker",
+    "doc": "Placeholder Documentation",
+    "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "image": "/images/Placeholder5.png"
+  }
+]

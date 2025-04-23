@@ -1,14 +1,16 @@
 <template>
-    <div class="container">
-        <div class="doc-background">
+    <div class="doc-background">
+        <div class="doc-layout">
             <div class="details">
               <h1>Documentation</h1>
-              <a class="projectLink" href="/testPage"> 
+              <div v-for="document in documents" :key="document.id">
                 <DocCard
-                image = ""
-                name = "Project Test"
-                description = "Testing if this works"/>
-              </a>
+                  :image="document.image"
+                  :name="document.name"
+                  :description="document.description"
+                  :doc="document.doc"
+                />
+              </div>
             </div>
             
         </div>
@@ -16,6 +18,9 @@
 </template>
 
 <script setup>
+import DocCard from '~/components/projectCard.vue'
+import documents from '~/data/documents.json'
+
 useHead({
   title: 'Project Documentation | Ryan Nedbalek',
   meta: [
@@ -40,8 +45,8 @@ h1{
 .doc-background {
   display: flex;
   justify-content: center;
-  height: 100vw;
-  width: 100vw;
+  height: 100vh;
+  width: 100%;
   position: relative;
   background-color: #282828;
   overflow: hidden;
@@ -57,10 +62,6 @@ h1{
   opacity: 0.25;
   background-attachment: fixed;
   z-index: 0;
-}
-
-.projectLink {
-  text-decoration-line: none;
 }
 
 .details {

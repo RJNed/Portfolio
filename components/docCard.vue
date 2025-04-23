@@ -1,68 +1,112 @@
 <template>
-    <div class="cardContainer">
-      <div class = "imageSection">
-        <h3 class="projectName">{{ name }}</h3>
-        <img :src="image" :alt="name" class="projectPreview" />
-        <!-- <img src="C:\Users\Ryan\Desktop\Porfolio\src\DemoVendors\Shop2.jpg" :alt="name" class="projectPreview" /> -->
-      </div>
-      <div class="descriptionSection">
-        <p class="projectDescription">{{ description }}</p>
-      </div>
+  <NuxtLink :to="`/documentation/${slug-doc}`" class="cardContainer">
+    <div class="imageSection">
+      <h3 class="projectName">{{ name }}</h3>
+      <img :src="image" :alt="name" class="projectPreview" />
     </div>
-  </template>
-  
-  <script setup>
-  defineProps({
-    image: String,
-    name: String,
-    description: String,
-  })
-  </script>
-  
+    <div class="descriptionSection">
+      <p class="projectDescription">{{ description }}</p>
+    </div>
+  </NuxtLink>
+</template>
+
+<script setup>
+defineProps({
+  image: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  slug: {
+    type: String,
+    required: true
+  }
+})
+</script>
+
 <style scoped>
-.cardContainer{
+.cardContainer {
   position: relative;
   z-index: 1;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration-line: none;
   border-radius: 8px;
-  justify-content: space-between;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* border: 2px solid rgb(250, 235, 215, 0.4); */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85);
   text-align: center;
-  width: 1000px;
-  height:150px;
-  margin: 20px;
-  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  /* padding: 20px; */
+  margin-bottom: 20px;
+  /* flex-wrap: nowrap; prevent premature wrap */
 }
 
-.descriptionSection p{
-  color:rgb(16, 16, 16);
+.cardContainer:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  flex: 0 0 150px;
+  color: rgb(17, 18, 18);
+  padding: 15px
+}
+
+.descriptionSection {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.descriptionSection p {
+  color: rgb(16, 16, 16);
   text-align: left;
-  width: 800px;
   padding-left: 20px;
+  width: 100%;
 }
 
-.imageSection h3{
+.imageSection h3 {
   font-size: 22px;
-  margin: 0px;
+  margin: 0px 0px 10px;
   padding: 0px;
 }
 
 .projectPreview {
-  height: 125px;
-  width: 125px;
-  text-align: center;
-  align-self: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 4px;
 }
 
-.imageSection{
-  display:flex;
-  flex-direction: column;
-  border-radius: 4px;
-  width: 150px;
-  height:100%;
-  color:rgb(17, 18, 18);
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .imageSection,
+  .descriptionSection {
+    width: 100%;
+    /* text-align: center; */
+  }
+
+  .descriptionSection p {
+    padding-left: 0;
+    text-align: center;
+  }
+}
 </style>
