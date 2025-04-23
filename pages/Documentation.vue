@@ -3,14 +3,12 @@
         <div class="doc-layout">
             <div class="details">
               <h1>Documentation</h1>
-              <div v-for="document in documents" :key="document.id">
-                <DocCard
-                  :image="document.image"
-                  :name="document.name"
-                  :description="document.description"
-                  :doc="document.doc"
-                />
-              </div>
+              <a class="projectLink" href="/testPage"> 
+                <docCard
+                image = ""
+                name = "Project Test"
+                description = "Testing if this works"/>
+              </a>
             </div>
             
         </div>
@@ -18,8 +16,7 @@
 </template>
 
 <script setup>
-import DocCard from '~/components/projectCard.vue'
-import documents from '~/data/documents.json'
+import docCard from "~/components/docCard.vue"
 
 useHead({
   title: 'Project Documentation | Ryan Nedbalek',
@@ -62,6 +59,10 @@ h1{
   opacity: 0.25;
   background-attachment: fixed;
   z-index: 0;
+}
+
+.projectLink {
+  text-decoration-line: none;
 }
 
 .details {
