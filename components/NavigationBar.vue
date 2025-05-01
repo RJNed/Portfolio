@@ -115,7 +115,7 @@ const handleSearch = () => {
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 15px;
+  gap: 40px;
   order: 2;
 }
 
@@ -123,7 +123,7 @@ const handleSearch = () => {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
 }
 .nav-links a:hover {
   transform: translateY(-5px);
