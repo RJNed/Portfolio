@@ -3,20 +3,23 @@
         <div class="doc-layout">
             <div class="details">
               <h1>Documentation</h1>
-              <a class="projectLink" href="/testPage"> 
-                <docCard
-                image = ""
-                name = "Project Test"
-                description = "Testing if this works"/>
-              </a>
-            </div>
-            
+              <div v-for="project in project_docs" :key="project.id">
+              <documentCard
+                :image="project.image"
+                :name="project.name"
+                :description="project.description"
+                :slug="project.slug"
+              />
+              </div>
+          </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import docCard from "~/components/docCard.vue"
+import documentCard from "~/components/documentCard.vue"
+import project_docs from '~/data/documentation.json' // JSON file import
+
 
 useHead({
   title: 'Project Documentation | Ryan Nedbalek',
@@ -42,7 +45,7 @@ h1{
 .doc-background {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   background-color: #282828;

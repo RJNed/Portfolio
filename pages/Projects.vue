@@ -1,24 +1,56 @@
 <template>
-    <div class="projects-background">
-      <div class="project-overlay">
-        <div class="details">
-          <h1>Projects</h1>
-          <div v-for="project in projects" :key="project.id">
-              <projectCard
-                :image="project.image"
-                :name="project.name"
-                :description="project.description"
-                :slug="project.slug"
-              />
-          </div>
+  <div class="projects-background">
+    <div class="project-overlay">
+      <div class="details">
+        <h1>Projects</h1>
+
+        <!-- Filter Dropdown -->
+        <div class="filter-wrapper">
+          <label for="type-filter">Filter by Type:</label>
+          <select id="type-filter" v-model="selectedType">
+            <option value="All">All</option>
+            <option v-for="type in uniqueTypes" :key="type" :value="type">{{ type }}</option>
+          </select>
+        </div>
+
+        <!-- Filtered Project Cards -->
+        <div v-for="project in filteredProjects" :key="project.id">
+          <projectCard
+            :image="project.image"
+            :name="project.name"
+            :description="project.description"
+            :slug="project.slug"
+            :type="project.type"
+          />
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
+import {useRoute} from 'vue-router'
 import projectCard from '~/components/projectCard.vue'
-import projects from '~/data/projects.json' // JSON file import
+import allProjects from '~/data/projects.json'
+
+const route = useRoute()
+const selectedType = ref(route.query.type || 'All')
+
+// Extract all types from the projects
+const allTypes = allProjects.map(project => project.type)
+
+// Filter out empty or falsy values
+const validTypes = allTypes.filter(type => type)
+
+// Remove duplicates by converting to a Set, then back to an array
+const uniqueTypes = Array.from(new Set(validTypes))
+
+// Filter the projects based on the selected type
+const filteredProjects = computed(() => {
+  if (selectedType.value === 'All') return allProjects
+  return allProjects.filter(project => project.type === selectedType.value)
+})
 
 useHead({
   title: 'Projects | Ryan Nedbalek',
@@ -35,6 +67,7 @@ useHead({
   ]
 })
 </script>
+
 
 
 <style scoped>
@@ -84,4 +117,30 @@ useHead({
   color:#fcfcc0;
 }
 
+.filter-wrapper{
+  margin: 20px;
+}
+
+#type-filter {
+  padding: 6px 20px;
+  border-radius: 6px;
+  background-color: #b9c5cf;
+  color: #000000;
+  border: 2px solid #444;
+  appearance: none; /* Removes default OS styles */
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#type-filter:hover {
+  border-color: #888;
+  background-color: #cadff2;
+}
+
+#type-filter:focus {
+  outline: none;
+  border-color: #fcfcc0;
+  box-shadow: 0 0 0 2px rgba(252, 252, 192, 0.4);
+}
 </style>

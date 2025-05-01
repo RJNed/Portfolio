@@ -28,12 +28,12 @@
           <div class="project-card">
             <h3>Software Projects</h3>
             <p>View Software, Scripts, and CAD Projects</p>
-            <a href="/Projects">View Projects</a>
+            <a href="/Projects?type=Software">View Projects</a>
           </div>
           <div class="project-card">
             <h3>Lab Projects</h3>
             <p>View 3D Printing, Electronics, and Robotics Projects</p>
-            <a href="/Projects">View Projects</a>
+            <a href="/Projects?type=Design">View Projects</a>
           </div>
           <div class="project-card">
             <h3>Documentation</h3>

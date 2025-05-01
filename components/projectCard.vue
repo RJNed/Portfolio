@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/projects/${slug}`" class="cardContainer">
+  <NuxtLink :to="`/Projects/${slug}`" class="cardContainer">
     <div class="imageSection">
       <h3 class="projectName">{{ name }}</h3>
       <img :src="image" :alt="name" class="projectPreview" />
@@ -25,6 +25,10 @@ defineProps({
     required: true
   },
   slug: {
+    type: String,
+    required: true
+  },
+  type: {
     type: String,
     required: true
   }

@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Portfolio Website",
+      "slug": "portfolio",
+      "description": "Documentation for my Nuxt-based portfolio website...",
+      "image": "/images/Maintenance.png"
+    },
+    {
+      "id": 2,
+      "name": "Placeholder 1",
+      "slug": "Placeholder 1",
+      "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+      "image": "/images/Placeholder1.png"
+    },
+    {
+      "id": 3,
+      "name": "Placeholder 2",
+      "slug": "task-tracker-api",
+      "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+      "image": "/images/Placeholder2.png"
+    },
+    {
+      "id": 4,
+      "name": "Placeholder 3",
+      "slug": "robobot-simulator",
+      "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+      "image": "/images/Placeholder3.png"
+    },
+    {
+      "id": 5,
+      "name": "Placeholder 4",
+      "slug": "network-monitor-tool",
+      "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+      "image": "/images/Placeholder4.png"
+    },
+    {
+      "id": 6,
+      "name": "Placeholder 5",
+      "slug": "lunar-phase-tracker",
+      "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+      "image": "/images/Placeholder5.png"
+    }
+  ]
