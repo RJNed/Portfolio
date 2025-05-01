@@ -152,7 +152,7 @@ useHead({
 
 .featured-projects-banner,
 .home-section {
-  background: rgb(181, 181, 181);
+  background: rgba(255, 255, 255, 0.85);
   color: #333;
 }
 
@@ -172,13 +172,20 @@ useHead({
 }
 
 .project-card {
-  background: #dedede;
-  padding: 15px;
+  background: #b4c1c147;
+  padding: 20px;
   border-radius: 8px;
+  border: #00000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 250px;
   text-align: center;
+}
+
+.project-card:hover{
+  background-color: #ffffff5d;
+  border: 2px solid #4747476f;
+  transition: background-color 1s ease, border-color 1s ease;
 }
 
 .project-card h3 {
