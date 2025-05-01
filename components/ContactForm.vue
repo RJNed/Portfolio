@@ -37,9 +37,9 @@
   const contactMessage = ref('')
   
   const handleMessage = () => {
-    const serviceID = 'service_2w0ggij'
-    const templateID = 'template_iwca5bm'
-    const publicKey = 'cKK2nzE7-DjGJs5sl'
+    const serviceID = useRuntimeConfig().public.emailjsServiceId
+    const templateID = useRuntimeConfig().public.emailjsTemplateId
+    const publicKey = useRuntimeConfig().public.emailjsPublicKey
   
     const templateParams = {
       from_name: name.value,

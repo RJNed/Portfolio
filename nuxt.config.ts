@@ -5,4 +5,12 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
   devtools: { enabled: false },
   css: ['@/assets/css/global.css'],
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: process.env.NUXT_EMAILJS_SERVICE_ID,
+      emailjsTemplateId: process.env.NUXT_EMAILJS_TEMPLATE_ID,
+      emailjsPublicKey: process.env.NUXT_EMAILJS_PUBLIC_KEY
+    }
+  }
 })
+
