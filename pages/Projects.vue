@@ -124,7 +124,7 @@ useHead({
 #type-filter {
   padding: 6px 20px;
   border-radius: 6px;
-  background-color: #b9c5cf;
+  background-color: #c7cdd2;
   color: #000000;
   border: 2px solid #444;
   appearance: none; /* Removes default OS styles */

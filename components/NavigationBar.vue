@@ -2,7 +2,7 @@
   <nav class="navbar">
     <!-- Logo -->
     <div class="brand">
-      <a href="/"><img src="/public/images/portfolio-icon.png" /></a>
+      <a href="/"><img src="/public/images/portfolio-icon-cropped.png" /></a>
     </div>
 
     <!-- Search -->
@@ -61,12 +61,13 @@ const handleSearch = () => {
   order: 1;
 }
 .brand img {
-  width: 100px;
-  height: 75px;
+  width: 60px;
+  height: 45px;
   transition: all 0.5s ease;
 }
 .brand:hover {
   transform: translateY(-5px);
+  transition: all 0.5s ease;
 }
 
 /* Search */
