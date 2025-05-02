@@ -18,7 +18,7 @@
   const error = useError()
   
   const slug = route.params.slug
-  const project = projects.find(p => p.slug === slug)
+  const project = projects.find(project => project.slug === slug)
   
   if (!project) {
     error({ statusCode: 404, message: 'Project not found' })
