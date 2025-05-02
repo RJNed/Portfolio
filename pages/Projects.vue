@@ -31,7 +31,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import {useRoute} from 'vue-router'
-import projectCard from '~/components/projectCard.vue'
+import projectCard from '~/components/ProjectCard.vue'
 import allProjects from '~/data/projects.json'
 
 const route = useRoute()

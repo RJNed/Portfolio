@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import documentCard from "~/components/documentCard.vue"
+import documentCard from "~/components/DocumentCard.vue"
 import project_docs from '~/data/documentation.json' // JSON file import
 
 
