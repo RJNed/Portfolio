@@ -99,7 +99,7 @@ defineProps({
 /* Responsive Design */
 @media (max-width: 768px) {
   .cardContainer {
-    width:100%;
+    width:95%;
     flex-direction: column;
     text-align: center;
   }
