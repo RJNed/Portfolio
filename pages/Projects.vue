@@ -18,7 +18,7 @@
           <projectCard
             :image="project.image"
             :name="project.name"
-            :description="project.description"
+            :description="project.brief"
             :slug="project.slug"
             :type="project.type"
           />

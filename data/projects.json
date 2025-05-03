@@ -3,7 +3,8 @@
     "id": 1,
     "name": "Portfolio Website",
     "slug": "portfolio",
-    "description": "A Nuxt-based portfolio...",
+    "brief": "A fast, clean portfolio site hosted on Vercel—built with Vue 3 and Nuxt.js to showcase technical projects and documentation.",
+    "description": "This site is a collection of my projects, split into two main areas: Software and Lab work. The Software Projects cover coding with tools like Vue 3, Nuxt.js, Node.js, TypeScript, Python, and SQL. The Lab Projects are hands-on builds—things like 3D printing, CAD models, electronics, IoT devices, and home networking setups. Each project page gives an brief overview of what the project is. Documentation breaks down what I made, how I built it, and includes planning notes, documentation, code, and pictures. The goal is to show real, practical skills—building things that work, both in software and in the physical world.",
     "image": "/images/Maintenance.png",
     "type": "Software",
     "tech": ["Frontend: Vue3+Nuxt", "Backend: Node.js+Express", "Scripting Language: Typescript", "Styling: CSS", "Hosting: Vercel", "Reposistory: GitHub"]
@@ -12,6 +13,7 @@
     "id": 2,
     "name": "Placeholder 1",
     "slug": "Placeholder 1",
+    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder1.png",
     "type": "Design"
@@ -20,6 +22,7 @@
     "id": 3,
     "name": "Placeholder 2",
     "slug": "task-tracker-api",
+    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder2.png",
     "type": "Software"
@@ -28,6 +31,7 @@
     "id": 4,
     "name": "Placeholder 3",
     "slug": "robobot-simulator",
+    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder3.png",
     "type": "Design"
@@ -36,6 +40,7 @@
     "id": 5,
     "name": "Placeholder 4",
     "slug": "network-monitor-tool",
+    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder4.png",
     "type": "Software"
@@ -44,6 +49,7 @@
     "id": 6,
     "name": "Placeholder 5",
     "slug": "lunar-phase-tracker",
+    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder5.png",
     "type": "Design"
