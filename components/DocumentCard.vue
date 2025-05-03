@@ -7,9 +7,6 @@
       <div class="descriptionSection">
         <p class="projectDescription">{{ description }}</p>
       </div>
-      <div>
-        <p>"please update :')"</p>
-      </div>
     </NuxtLink>
   </template>
 
