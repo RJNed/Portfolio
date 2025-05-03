@@ -4,7 +4,7 @@
             <div class="details">
               <h1>Documentation</h1>
               <div v-for="project in project_docs" :key="project.id">
-              <documentCard
+              <DocumentCard
                 :image="project.image"
                 :name="project.name"
                 :description="project.description"
