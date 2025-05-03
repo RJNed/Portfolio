@@ -55,6 +55,7 @@ defineProps({
   /* flex-wrap: nowrap; prevent premature wrap */
 }
 
+
 .cardContainer:hover {
   transform: translateY(-10px);
   transition: all 0.5s ease;
