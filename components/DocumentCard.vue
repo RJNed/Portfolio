@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="`/documents/${slug}`" class="cardContainer"> a
+    <NuxtLink :to="`/documents/${slug}`" class="cardContainer">
       <div class="imageSection">
         <h3 class="projectName">{{ name }}</h3>
         <img :src="image" :alt="name" class="projectPreview" />
