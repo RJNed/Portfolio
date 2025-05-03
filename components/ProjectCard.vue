@@ -41,7 +41,6 @@ defineProps({
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   text-decoration-line: none;
   border-radius: 8px;
   /* border: 2px solid rgb(250, 235, 215, 0.4); */
@@ -50,9 +49,9 @@ defineProps({
   text-align: center;
   width: 100%;
   max-width: 1000px;
-  /* padding: 20px; */
+  padding: 10px;
   margin-bottom: 20px;
-  /* flex-wrap: nowrap; prevent premature wrap */
+  flex-wrap: nowrap; /* prevent premature wrap */
 }
 
 
@@ -74,6 +73,7 @@ defineProps({
 .descriptionSection {
   flex: 1 1 0%;
   min-width: 0;
+  padding-right: 30px
 }
 
 .descriptionSection p {
@@ -99,14 +99,16 @@ defineProps({
 /* Responsive Design */
 @media (max-width: 768px) {
   .cardContainer {
+    width:100%;
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
   }
 
   .imageSection,
   .descriptionSection {
     width: 100%;
-    /* text-align: center; */
+    text-align: center;
+    padding: 5px
   }
 
   .descriptionSection p {

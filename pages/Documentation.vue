@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import documentCard from "~/components/DocumentCard.vue"
+import DocumentCard from "~/components/DocumentCard.vue"
 import project_docs from '~/data/documentation.json' // JSON file import
 
 
@@ -64,16 +64,30 @@ h1{
   z-index: 0;
 }
 
-.projectLink {
-  text-decoration-line: none;
+.doc-layout {
+  position: relative;
+  z-index: 1;
+  display: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .details {
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 40px;
   text-align: center;
   align-items: center;
-  padding: 5px;
+  /* padding: 5px; */
   color:#fcfcc0;
 }
 
+@media(max-width: 1120px){
+  .doc-layout{
+    width: 80%;
+  }
+}
 </style>

@@ -101,9 +101,6 @@ useHead({
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* color: white;
-  margin:5px;
-  padding: 20px; */
   width: 100%;
   max-width: 1000px;
 }
@@ -142,5 +139,11 @@ useHead({
   outline: none;
   border-color: #fcfcc0;
   box-shadow: 0 0 0 2px rgba(252, 252, 192, 0.4);
+}
+
+@media(max-width: 1120px){
+  .project-overlay{
+    width: 80%;
+  }
 }
 </style>
