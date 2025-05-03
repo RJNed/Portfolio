@@ -89,7 +89,7 @@ if (!project) {
 
 .content-grid {
   display: flex;
-  gap: 60px;
+  gap: 20px;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -158,8 +158,21 @@ if (!project) {
     justify-content: center;
   }
 
+  .left-column{
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  .left-column ul{
+    text-align: start;
+  }
+
   .right-column{
     text-align: center;
+  }
+
+  .right-column p {
+    margin: 20px
   }
 
   .background{
