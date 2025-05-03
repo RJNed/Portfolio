@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="`/documents/${slug}`" class="cardContainer">
+    <NuxtLink :to="`/documents/${slug}`" class="cardContainer"> a
       <div class="imageSection">
         <h3 class="projectName">{{ name }}</h3>
         <img :src="image" :alt="name" class="projectPreview" />
@@ -9,6 +9,7 @@
       </div>
     </NuxtLink>
   </template>
+
   
   <script setup>
   defineProps({
