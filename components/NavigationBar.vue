@@ -132,8 +132,17 @@ const handleSearch = () => {
   color: lightyellow;
 }
 
+@media (max-width: 1120px){
+  .nav-links {
+  gap: 20px;
+  }
+  .nav-links li a {
+  font-size: 18px;
+}
+}
+
 /* Responsive Layout */
-@media (max-width: 978px) {
+@media (max-width: 945px) {
   .navbar {
     flex-direction: row;
     flex-wrap: wrap;
