@@ -151,7 +151,6 @@
       font-size: 22px;
     }
   }
-
  
 @media(max-width: 899px){
   .content-grid{
