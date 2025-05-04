@@ -79,87 +79,101 @@
   margin: 0 auto;
   color: white;
   z-index: 1;
-}
-
-.project-title {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 50px;
-}
-
-.content-grid {
-  display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Left Column */
-.left-column {
-  flex: 1;
-  min-width: 350px;
-  max-width: 600px;
-}
-
-.project-image {
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
-  margin: 50px;
-  margin-top: 0px;
-  transition: transform 0.3s ease;
-  border: 1px solid #fcfcc0;
-}
-
-.project-image:hover {
-  transform: scale(1.05);
-}
-
-.tech-list {
-  list-style-type: disc;
-  padding-left: 40px;
-  font-size: 20px;
-  color: white;
-  margin: 35px;
-  margin-top: 0px;
-}
-
-/* Right Column */
-.right-column {
-  flex: 2;
-  min-width: 400px;
-  font-size: 20px;
-  line-height: 1.8;
-}
-
-/* Optional: improve large screen appearance */
-@media (min-width: 1600px) {
-  .project-details {
-    width: 95vw;
   }
 
   .project-title {
+    text-align: center;
     font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  .content-grid {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* Left Column */
+  .left-column {
+    flex: 1;
+    min-width: 350px;
+    max-width: 600px;
+  }
+
+  .project-image {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin: 40px;
+    margin-top: 0px;
+    transition: transform 0.3s ease;
+    border: 1px solid #fcfcc0;
+  }
+
+  .project-image:hover {
+    transform: scale(1.05);
   }
 
   .tech-list {
-    font-size: 22px;
+    list-style-type: disc;
+    padding-left: 40px;
+    font-size: 20px;
+    color: white;
+    margin: 35px;
+    margin-top: 0px;
   }
 
+  /* Right Column */
   .right-column {
-    font-size: 22px;
+    flex: 2;
+    min-width: 400px;
+    font-size: 20px;
+    line-height: 1.8;
   }
-}
 
+  /* Optional: improve large screen appearance */
+  @media (min-width: 1600px) {
+    .project-details {
+      width: 95vw;
+    }
+
+    .project-title {
+      font-size: 48px;
+    }
+
+    .tech-list {
+      font-size: 22px;
+    }
+
+    .right-column {
+      font-size: 22px;
+    }
+  }
+
+ 
 @media(max-width: 899px){
   .content-grid{
     align-items: center;
     justify-content: center;
   }
 
+  .left-column{
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  .left-column ul{
+    text-align: start;
+  }
+
   .right-column{
     text-align: center;
+  }
+
+  .right-column p {
+    margin: 20px
   }
 
   .background{
