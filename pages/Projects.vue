@@ -3,54 +3,13 @@
     <div class="project-overlay">
       <div class="details">
         <h1>Projects</h1>
-
-        <!-- Filter Dropdown -->
-        <div class="filter-wrapper">
-          <label for="type-filter">Filter by Type:</label>
-          <select id="type-filter" v-model="selectedType">
-            <option value="All">All</option>
-            <option v-for="type in uniqueTypes" :key="type" :value="type">{{ type }}</option>
-          </select>
-        </div>
-
-        <!-- Filtered Project Cards -->
-        <div v-for="project in filteredProjects" :key="project.id">
-          <projectCard
-            :image="project.image"
-            :name="project.name"
-            :description="project.brief"
-            :slug="project.slug"
-            :type="project.type"
-          />
-        </div>
+        <Filter />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import {useRoute} from 'vue-router'
-import projectCard from '~/components/ProjectCard.vue'
-import allProjects from '~/data/projects.json'
-
-const route = useRoute()
-const selectedType = ref(route.query.type || 'All')
-
-// Extract all types from the projects
-const allTypes = allProjects.map(project => project.type)
-
-// Filter out empty or falsy values
-const validTypes = allTypes.filter(type => type)
-
-// Remove duplicates by converting to a Set, then back to an array
-const uniqueTypes = Array.from(new Set(validTypes))
-
-// Filter the projects based on the selected type
-const filteredProjects = computed(() => {
-  if (selectedType.value === 'All') return allProjects
-  return allProjects.filter(project => project.type === selectedType.value)
-})
 
 useHead({
   title: 'Projects | Ryan Nedbalek',

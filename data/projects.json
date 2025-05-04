@@ -16,7 +16,7 @@
     "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder1.png",
-    "type": "Design"
+    "type": "Lab"
   },
   {
     "id": 3,
@@ -34,7 +34,7 @@
     "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder3.png",
-    "type": "Design"
+    "type": "Lab"
   },
   {
     "id": 5,
@@ -52,6 +52,6 @@
     "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "description": "This site is currently under construction. We’re actively working on updates—please check back soon!",
     "image": "/images/Placeholder5.png",
-    "type": "Design"
+    "type": "Lab"
   }
 ]

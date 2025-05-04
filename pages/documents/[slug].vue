@@ -26,28 +26,28 @@
 </template>
   
 <script setup>
-import { useRoute, useError } from 'nuxt/app'
-import project_docs from '~/data/documentation.json'
+  import { useRoute, useError } from 'nuxt/app'
+  import project_docs from '~/data/documentation.json'
 
-const route = useRoute()
-const error = useError()
+  const route = useRoute()
+  const error = useError()
 
-const slug = route.params.slug
-const project = project_docs.find(project => project.slug === slug)
+  const slug = route.params.slug
+  const project = project_docs.find(project => project.slug === slug)
 
-if (!project) {
-  error({ statusCode: 404, message: 'Project not found' })
-} else {
-  useHead({
-    title: `${project.name} | Ryan Nedbalek`,
-    meta: [
-      { name: 'description', content: project.description },
-      { property: 'og:title', content: project.name },
-      { property: 'og:description', content: project.description },
-      { property: 'og:image', content: project.image }
-    ]
-  })
-}
+  if (!project) {
+    error({ statusCode: 404, message: 'Project not found' })
+  } else {
+    useHead({
+      title: `${project.name} | Ryan Nedbalek`,
+      meta: [
+        { name: 'description', content: project.description },
+        { property: 'og:title', content: project.name },
+        { property: 'og:description', content: project.description },
+        { property: 'og:image', content: project.image }
+      ]
+    })
+  }
 </script>
   
 <style scoped>
