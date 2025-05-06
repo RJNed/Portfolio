@@ -1,3 +1,31 @@
+<!-- documentation structure idea:
+Overview / Project Summary
+  -What the project is
+  -Key goals
+
+Tech Stack
+  -Tools, frameworks, APIs used
+
+Features
+  -Main functionality
+  -Screenshots or diagrams
+
+Architecture / Flow
+  -How it works (can be brief)
+  -Optional diagrams
+
+Development Process
+  -Phases, challenges, solutions
+
+Testing
+  -Types of testing done and tools used
+
+Deployment
+  -Hosting platform, environment config, etc.
+
+Post-Launch
+  -Improvements, updates, lessons learned
+🔗 At the bottom: Include a Download Full Documentation (.docx / .pdf) link. -->
 <template>
   <div class ="background">
     <div class="project-details" v-if="project">
@@ -11,6 +39,7 @@
             :alt="`Project image for ${project.name}`"
             class="project-image"
           />
+          <p class="listoverview">Overview</p>
           <ul class="tech-list">
             <li v-for="(item, index) in project.tech" :key="index">{{ item }}</li>
           </ul>
@@ -18,7 +47,29 @@
 
         <!-- Right Column -->
         <div class="right-column">
+          <h2>What is the project?</h2>
           <p>{{ project.description }}</p>
+
+          <h2>What is the goal?</h2>
+          <p>{{ project.goal }}</p>
+
+          <h2>Features</h2>
+          <li v-for="(item, index) in project.features" :key="index">{{ item }}</li>
+
+          <h2>Development Process</h2>
+          <p>-</p>
+
+          <h2>Testing</h2>
+          <p>-</p>
+
+          <h2>Deployment</h2>
+          <p>-</p>
+
+          <h2>Post-Launch</h2>
+          <h3>Improvements</h3>
+          <p>-</p>
+          <h3>Lessons Learned</h3>
+          <p>-</p>
         </div>
       </div>
     </div>
@@ -54,7 +105,7 @@
   .background {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
     background-color: #282828;

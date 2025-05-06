@@ -1,3 +1,27 @@
+<!-- Project Title
+Short Tagline or Purpose (1–2 sentences)
+
+Hero Image or Screenshot
+(optional animated GIF or carousel of UI)
+
+Summary
+- What the project is
+- Why you built it
+- What problems it solves
+
+Tech Stack
+- Vue 3, Vite, Tailwind, etc.
+- Any APIs, frameworks, libraries
+
+Key Features
+- List of main features (e.g., filtering, dark mode, dynamic routing)
+
+Testing & Challenges (optional)
+- “This was my first time using EmailJS” or “I had to learn how to lazy-load components”
+
+🌐 Live Demo Button
+🔗 GitHub Repo Button
+📄 Link to Full Documentation (optional) -->
 <template>
   <div class ="background">
     <div class="project-details" v-if="project">
