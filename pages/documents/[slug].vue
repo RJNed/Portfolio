@@ -140,7 +140,6 @@ Post-Launch
 
   .content-grid {
     display: flex;
-    gap: 60px;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -151,14 +150,22 @@ Post-Launch
     flex: 1;
     min-width: 350px;
     max-width: 600px;
+    text-align: center;
+  }
+
+  .listoverview{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 0px;
+    margin-bottom:20px;
   }
 
   .project-image {
     width: 80%;
     height: auto;
     border-radius: 10px;
-    margin: 40px;
-    margin-top: 0px;
+    margin: 45px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
     border: 1px solid #fcfcc0;
   }
@@ -169,11 +176,11 @@ Post-Launch
 
   .tech-list {
     list-style-type: disc;
-    padding-left: 40px;
     font-size: 20px;
     color: white;
     margin: 35px;
     margin-top: 0px;
+    text-align: start;
   }
 
   /* Right Column */
