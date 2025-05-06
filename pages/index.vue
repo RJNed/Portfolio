@@ -10,6 +10,7 @@
         <li>Project and Documentation page content</li>
         <li>Better page scaling for any device</li>
         <li>Updated page styling</li>
+        <li>Light and Dark mode</li>
       </div>
       <p>If you have suggestions for features feel free to <a class='bulletref' href="/Contact-Page">contact</a> me!</p>
       <!-- Featured Vendors Banner -->
