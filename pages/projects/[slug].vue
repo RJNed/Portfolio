@@ -1,3 +1,4 @@
+
 <!-- This is a slug for the placeholder projects. It is not used in the actual project. -->
 <template>
   <div class ="background">
