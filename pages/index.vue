@@ -27,19 +27,25 @@
         <h2>Project Categories</h2>
         <div class="project-cards">
           <div class="project-card">
-            <h3>Software Projects</h3>
-            <p>View Software, Scripts, and CAD Projects</p>
-            <a href="/Projects?type=Software">View Projects</a>
+            <NuxtLink to="/projects?type=Software">
+              <h3>Software Projects</h3>
+              <p>View Software, Scripts, and CAD Projects</p>
+              <span class="view-link">View Projects</span>
+            </NuxtLink>
           </div>
           <div class="project-card">
-            <h3>Lab Projects</h3>
-            <p>View 3D Printing, Electronics, and Robotics Projects</p>
-            <a href="/Projects?type=Design">View Projects</a>
+            <NuxtLink to="/projects?type=Lab">
+              <h3>Lab Projects</h3>
+              <p>View 3D Printing, Electronics, and Robotics Projects</p>
+              <span class="view-link">View Projects</span>
+            </NuxtLink>
           </div>
           <div class="project-card">
-            <h3>Documentation</h3>
-            <p>View Documentation for Completed and Upcoming Projects</p>
-            <a href="/Documentation">View Documentation</a>
+            <NuxtLink to="/documentation">
+              <h3>Documentation</h3>
+              <p>View Documentation for Completed and Upcoming Projects</p>
+              <span class="view-link">View Documentation</span>
+            </NuxtLink>
           </div>
         </div>
       </section>
@@ -77,7 +83,7 @@ useHead({
     { name: 'description', content: 'Portfolio of Ryan Nedbalek — Software developer, product engineer, and IT professinoal. Showcasing personal projects, tech experiments, and creative problem solving.' },
     { name: 'keywords', content: 'Ryan Nedbalek, developer, portfolio, Nuxt, Vue, robotics, product engineer, TypeScript, Node.js, home lab, web development' },
     { property: 'og:title', content: 'Ryan Nedbalek | Developer Portfolio' },
-    { property: 'og:description', content: 'Explore Ryan’s personal projects and engineering work.' },
+    { property: 'og:description', content: 'Explore Ryan\'s personal projects and engineering work.' },
     { property: 'og:image', content: '/images/portfolio-icon.png' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
@@ -91,15 +97,17 @@ useHead({
 .message {
   text-align: center;
   padding: 1rem;
+  color: #2c3e50;
 }
 
 .bullets {
   text-align: left;
   padding-left: 1.5rem;
+  color: #2c3e50;
 }
 
 .bulletref {
-  color: #00aaff;
+  color: #2c3e50;
 }
 
 .home-background {
@@ -109,21 +117,7 @@ useHead({
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background-color: #282828;
-}
-
-.home-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/images/pexels.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .home-overlay {
@@ -134,7 +128,7 @@ useHead({
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #2c3e50;
   padding: 20px;
   width: 100%;
   max-width: 1200px;
@@ -153,16 +147,18 @@ useHead({
 
 .featured-projects-banner,
 .home-section {
-  background: rgba(255, 255, 255, 0.85);
-  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .featured-projects-banner h1,
 .home-section h2,
 .home-cta h2 {
   font-size: 2.5rem;
-  color: #000;
-  margin: 0 0 1rem;
+  color: #000000;
+  margin: 0px;
+  padding-bottom: 10px;
 }
 
 .project-cards {
@@ -173,25 +169,26 @@ useHead({
 }
 
 .project-card {
-  background: #b4c1c147;
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
-  border: #00000000;
+  border: 1px solid rgba(52, 152, 219, 0.2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 250px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover{
-  background-color: #ffffff5d;
-  border: 2px solid #4747476f;
-  transition: background-color 1s ease, border-color 1s ease;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #2c3e50;
 }
 
 .project-card h3 {
   font-size: 1.5rem;
-  color: #000;
+  color: #2c3e50;
   margin-bottom: 10px;
 }
 
@@ -205,6 +202,14 @@ useHead({
   text-decoration: none;
   color: #00aaff;
   font-weight: bold;
+}
+
+.view-link {
+  text-decoration: none;
+  color: #00aaff;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
 }
 
 .home-cta {

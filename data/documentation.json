@@ -5,7 +5,9 @@
       "slug": "portfolio",
       "brief": "Documentation for my Nuxt-based portfolio website",
       "description": "This site is a collection of my projects, split into two main areas: Software and Lab work. The Software Projects cover coding with tools like Vue 3, Nuxt.js, Node.js, TypeScript, Python, and SQL. The Lab Projects are hands-on builds—things like 3D printing, CAD models, electronics, IoT devices, and home networking setups. Each project page gives an brief overview of what the project is. Documentation breaks down what I made, how I built it, and includes planning notes, documentation, code, and pictures. The goal is to show real, practical skills—building things that work, both in software and in the physical world.",
-      "image": "/images/Maintenance.png",
+      "image": "/images/fotis-fotopoulos-unsplash.jpg",
+
+
       "type": "Software",
       "tech": ["Frontend: Vue3+Nuxt", "Backend: Node.js+Express", "Scripting Language: Typescript", "Styling: CSS", "Hosting: Vercel", "Reposistory: GitHub"],
       "goal": "Primary goal of this project is to deepen my understanding of the software development life cycle. Organizing and breaking down challenges into managable tasks to ultimately create a finished product. In doing so, the finished product would be a platform of my own design to share future projects with the world.",
@@ -13,12 +15,13 @@
     },
     {
       "id": 2,
-      "name": "Placeholder 1",
-      "slug": "Placeholder 1",
+      "name": "Calculator",
+      "slug": "Calculator",
       "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "image": "/images/Placeholder1.png",
-      "type": "Lab"
+      "type": "Software",
+      "tech": ["HTML, Javascript, CSS"]
     },
     {
       "id": 3,

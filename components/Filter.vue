@@ -1,7 +1,7 @@
 <template>
     <!-- Shared Filter -->
     <div class="filter-wrapper">
-      <label for="type-filter">Filter by {{ isProjectPage ? 'Category' : 'Category' }}:</label>
+      <label for="type-filter">Filter by Category:</label>
       <select id="type-filter" v-model="selectedFilter">
         <option value="All">All</option>
         <option v-for="opt in uniqueOptions" :key="opt" :value="opt">{{ opt }}</option>
@@ -30,38 +30,37 @@
 </template>
   
 <script setup>
-    import { ref, computed } from 'vue'
+    import { ref, computed, onMounted } from 'vue'
     import { useRoute } from 'vue-router'
     import ProjectCard from '~/components/ProjectCard.vue'
     import DocumentCard from '~/components/DocumentCard.vue'
     import allProjects from '~/data/projects.json'
-    import project_docs from '~/data/documentation.json'
 
     const route = useRoute()
-    const isProjectPage = route.path.includes('/Projects')
+    const isProjectPage = route.path.includes('/Projects') || route.path.includes('/projects')
     const selectedFilter = ref('All')
 
-    // Choose the right data set
-    const dataSource = isProjectPage ? allProjects : project_docs
+    // Use the same data source for both pages since we consolidated
+    const dataSource = allProjects
 
     // Get all types or categories to filter
     const allOptions = computed(() => {
-    if (isProjectPage) {
         return allProjects.map(projects => projects.type).filter(Boolean)
-    } else {
-        return project_docs.map(docs => docs.type).filter(Boolean) // customize as needed
-    }
     })
 
     const uniqueOptions = computed(() => Array.from(new Set(allOptions.value)))
 
     // Compute the filtered list
     const filteredItems = computed(() => {
-    if (selectedFilter.value === 'All') return dataSource
-    return dataSource.filter(item => {
-        if (isProjectPage) return item.type === selectedFilter.value
-        else return item.type === selectedFilter.value // or item.type if you use same key
+        if (selectedFilter.value === 'All') return dataSource
+        return dataSource.filter(item => item.type === selectedFilter.value)
     })
+
+    // Handle query parameters for filtering
+    onMounted(() => {
+        if (route.query.type) {
+            selectedFilter.value = String(route.query.type)
+        }
     })
 </script>
   
@@ -70,29 +69,32 @@
   .filter-wrapper{
     margin: 20px;
   }
+
+  .filter-wrapper label {
+    color: #2c3e50;
+    font-weight: 600;
+  }
   
   #type-filter {
     padding: 6px 20px;
     border-radius: 6px;
-    background-color: #c7cdd2;
-    color: #000000;
-    border: 2px solid #444;
-    appearance: none; /* Removes default OS styles */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    appearance: none;
     cursor: pointer;
     margin-left: 10px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
   }
   
   #type-filter:hover {
-    border-color: #888;
-    background-color: #cadff2;
+    border-color: #34495e;
+    background-color: rgba(255, 255, 255, 1);
   }
   
   #type-filter:focus {
     outline: none;
-    border-color: #fcfcc0;
-    box-shadow: 0 0 0 2px rgba(252, 252, 192, 0.4);
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.4);
   }
-
-  
 </style>
