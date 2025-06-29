@@ -12,6 +12,7 @@
           :key="project.id"
           :to="`/projects/${project.slug}`"
           class="carousel-link"
+          @click="handleCarouselClick"
         >
           <img
             :src="project.image"
@@ -40,19 +41,42 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import projects from '~/data/projects.json';
 
 const currentIndex = ref(0);
+const isTransitioning = ref(false);
 
 const nextImage = () => {
+  if (isTransitioning.value) return;
+  isTransitioning.value = true;
   currentIndex.value = (currentIndex.value + 1) % projects.length;
+  setTimeout(() => {
+    isTransitioning.value = false;
+  }, 500);
 };
 
 const prevImage = () => {
+  if (isTransitioning.value) return;
+  isTransitioning.value = true;
   currentIndex.value = (currentIndex.value - 1 + projects.length) % projects.length;
+  setTimeout(() => {
+    isTransitioning.value = false;
+  }, 500);
+};
+
+const handleCarouselClick = (event: Event) => {
+  // Prevent navigation if carousel is transitioning
+  if (isTransitioning.value) {
+    event.preventDefault();
+    return;
+  }
 };
 
 let interval: ReturnType<typeof setInterval>;
 
 onMounted(() => {
-  interval = setInterval(nextImage, 5000);
+  interval = setInterval(() => {
+    if (!isTransitioning.value) {
+      nextImage();
+    }
+  }, 5000);
   window.addEventListener('keydown', handleKeydown);
 });
 
@@ -74,11 +98,16 @@ const handleKeydown = (event: KeyboardEvent) => {
 .carousel-container {
   position: relative;
   width: 100%;
-  margin: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--component-blue);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+  border: 1px solid var(--navbar-border);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
   display: flex;
   align-items: center;
-  border-radius: 10px;
 }
 
 .carousel-wrapper {
@@ -107,14 +136,16 @@ const handleKeydown = (event: KeyboardEvent) => {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(128, 128, 128, 0.7);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px 16px;
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;
-  border-radius: 50%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
 .nav-button.left {
@@ -126,7 +157,8 @@ const handleKeydown = (event: KeyboardEvent) => {
 }
 
 .nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(128, 128, 128, 0.9);
+  transform: translateY(-50%) scale(1.05);
 }
 
 .pagination-dots {
@@ -142,12 +174,13 @@ const handleKeydown = (event: KeyboardEvent) => {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--border);
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .pagination-dots span.active {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--accent);
 }
 
 @media (max-width: 768px) {

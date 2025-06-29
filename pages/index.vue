@@ -1,18 +1,6 @@
 <template>
   <div class="home-background">
     <div class="home-overlay">
-      <div class="message">
-        <p>NOTICE: This website is under construction and many features are not complete.</p>
-        <p>Here is a list of features to be added in the future:</p>
-      </div>
-      <div class="bullets">
-        <li>Search and filtering</li>
-        <li>Project and Documentation page content</li>
-        <li>Better page scaling for any device</li>
-        <li>Updated page styling</li>
-        <li>Light and Dark mode</li>
-      </div>
-      <p>If you have suggestions for features feel free to <a class='bulletref' href="/Contact-Page">contact</a> me!</p>
       <!-- Featured Vendors Banner -->
       <div class="featured-projects-banner">
         <h1>Featured Projects</h1>
@@ -97,17 +85,17 @@ useHead({
 .message {
   text-align: center;
   padding: 1rem;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 
 .bullets {
   text-align: left;
   padding-left: 1.5rem;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 
 .bulletref {
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 
 .home-background {
@@ -117,7 +105,8 @@ useHead({
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--bg-gradient);
+  transition: background 0.3s ease;
 }
 
 .home-overlay {
@@ -128,7 +117,7 @@ useHead({
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-primary);
   padding: 20px;
   width: 100%;
   max-width: 1200px;
@@ -147,16 +136,17 @@ useHead({
 
 .featured-projects-banner,
 .home-section {
-  background: rgba(255, 255, 255, 0.9);
-  color: #2c3e50;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--component-blue);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px var(--shadow);
+  border: 1px solid var(--navbar-border);
 }
 
 .featured-projects-banner h1,
 .home-section h2,
 .home-cta h2 {
   font-size: 2.5rem;
-  color: #000000;
+  color: var(--text-primary);
   margin: 0px;
   padding-bottom: 10px;
 }
@@ -169,77 +159,86 @@ useHead({
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid rgba(52, 152, 219, 0.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 8px var(--shadow);
   width: 100%;
   max-width: 250px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover{
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  border: 1px solid #2c3e50;
+  box-shadow: 0 8px 16px var(--shadow);
+  border: 1px solid var(--accent);
 }
 
 .project-card h3 {
   font-size: 1.5rem;
-  color: #2c3e50;
+  color: var(--text-primary);
   margin-bottom: 10px;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #242424;
+  color: var(--text-secondary);
   margin-bottom: 15px;
 }
 
 .project-card a {
   text-decoration: none;
-  color: #00aaff;
+  color: var(--accent);
   font-weight: bold;
 }
 
 .view-link {
   text-decoration: none;
-  color: #00aaff;
+  color: var(--accent);
   font-weight: bold;
   display: block;
   margin-top: 10px;
 }
 
 .home-cta {
-  background: #0044cc;
-  color: white;
+  background: var(--component-blue);
+  color: var(--text-primary);
+  border: 1px solid var(--navbar-border);
+}
+
+.home-cta h2 {
+  color: var(--text-primary);
 }
 
 .home-cta p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .cta-button {
   display: inline-block;
   text-decoration: none;
-  background: #00aaff;
-  color: white;
+  background: white;
+  color: #1e3a8a;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid white;
 }
 
 .cta-button:hover {
-  background: #0077b6;
+  background: #f8f9fa;
+  transform: translateY(-2px);
 }
 
 .home-footer {
-  color: white;
+  color: var(--text-primary);
   text-align: center;
+
 }
 
 .footer-links {
@@ -252,8 +251,12 @@ useHead({
 
 .footer-links a {
   text-decoration: none;
-  color: #00aaff;
+  color: #3498db;
   font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #2980b9;
 }
 
 /* Responsive adjustments */

@@ -1,4 +1,3 @@
-
 <!-- This is a slug for the placeholder projects. It is not used in the actual project. -->
 <template>
   <div class ="background">
@@ -28,28 +27,51 @@
 </template>
 
 <script setup>
-import { useRoute, useError } from 'nuxt/app'
+import { useRoute } from 'nuxt/app'
+import { computed, watchEffect } from 'vue'
 import projects from '~/data/projects.json'
 
 const route = useRoute()
-const error = useError()
 
-const slug = route.params.slug
-const project = projects.find(project => project.slug === slug)
+// Make slug reactive
+const slug = computed(() => route.params.slug)
+const project = computed(() => {
+  console.log('Looking for project with slug:', slug.value)
+  console.log('Available projects:', projects.map(p => p.slug))
+  
+  // Don't throw error if slug is undefined (during initial render)
+  if (!slug.value) {
+    console.log('Slug is undefined, returning null')
+    return null
+  }
+  
+  const foundProject = projects.find(project => project.slug === slug.value)
+  console.log('Found project:', foundProject)
+  
+  if (!foundProject) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: 'Project not found'
+    })
+  }
+  
+  return foundProject
+})
 
-if (!project) {
-  error({ statusCode: 404, message: 'Project not found' })
-} else {
-  useHead({
-    title: `${project.name} | Ryan Nedbalek`,
-    meta: [
-      { name: 'description', content: project.description },
-      { property: 'og:title', content: project.name },
-      { property: 'og:description', content: project.description },
-      { property: 'og:image', content: project.image }
-    ]
-  })
-}
+// Set up head when project changes
+watchEffect(() => {
+  if (project.value) {
+    useHead({
+      title: `${project.value.name} | Ryan Nedbalek`,
+      meta: [
+        { name: 'description', content: project.value.description },
+        { property: 'og:title', content: project.value.name },
+        { property: 'og:description', content: project.value.description },
+        { property: 'og:image', content: project.value.image }
+      ]
+    })
+  }
+})
 </script>
   
 <style scoped>
@@ -59,23 +81,26 @@ if (!project) {
     height: 100vh;
     width: 100%;
     position: relative;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: var(--bg-gradient);
     overflow: hidden;
+    transition: background 0.3s ease;
   }
 
   .project-details {
     width: 90vw;
     max-width: 1600px;
     margin: 0 auto;
-    color: #2c3e50;
+    color: var(--text-primary);
     z-index: 1;
+    transition: color 0.3s ease;
   }
 
   .project-title {
     text-align: center;
     font-size: 48px;
     margin-bottom: 50px;
-    color: #2c3e50;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
 
   .content-grid {
@@ -99,8 +124,8 @@ if (!project) {
     border-radius: 10px;
     margin: 50px;
     margin-top: 0px;
-    transition: transform 0.3s ease;
-    border: 1px solid #2c3e50;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--border);
   }
 
   .project-image:hover {
@@ -111,9 +136,10 @@ if (!project) {
     list-style-type: disc;
     padding-left: 40px;
     font-size: 20px;
-    color: #2c3e50;
+    color: var(--text-secondary);
     margin: 35px;
     margin-top: 0px;
+    transition: color 0.3s ease;
   }
 
   /* Right Column */
@@ -122,6 +148,8 @@ if (!project) {
     min-width: 400px;
     font-size: 20px;
     line-height: 1.8;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
 
 /* Optional: improve large screen appearance */

@@ -35,7 +35,8 @@ useHead({
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--bg-gradient);
+  transition: background 0.3s ease;
 }
 
 .content-container {

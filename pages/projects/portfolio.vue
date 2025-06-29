@@ -7,7 +7,6 @@
         <!-- Left Column -->
         <div class="left-column">
           <img
-
             src="/images/fotis-fotopoulos-unsplash.jpg"
             alt="Portfolio website project image"
             class="project-image"
@@ -73,23 +72,26 @@ const documentation = () => {
     height: 100%;
     width: 100%;
     position: relative;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: var(--bg-gradient);
     overflow: hidden;
+    transition: background 0.3s ease;
   }
 
   .project-details {
     width: 90vw;
     max-width: 1600px;
     margin: 0 auto;
-    color: #2c3e50;
+    color: var(--text-primary);
     z-index: 1;
+    transition: color 0.3s ease;
   }
 
   .project-title {
     text-align: center;
     font-size: 48px;
     margin-bottom: 50px;
-    color: #2c3e50;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
 
   .content-grid {
@@ -101,8 +103,8 @@ const documentation = () => {
   }
 
   .button {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: var(--accent);
+    color: var(--text-primary);
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -110,14 +112,13 @@ const documentation = () => {
     display: block;
     margin: 20px auto;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   }
 
   .button:hover {
-    background-color: #497298;
-    color: #fff;
+    background-color: var(--accent-hover);
     transform: scale(1.05);
-    transition: transform 0.3s ease;
-    border: 1px solid #2c3e50;
+    border: 1px solid var(--border);
     border-radius: 5px;
   }
 
@@ -136,8 +137,8 @@ const documentation = () => {
     height: auto;
     border-radius: 10px;
     margin: 0 0 20px 0;
-    transition: transform 0.3s ease;
-    border: 1px solid #2c3e50;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--border);
   }
 
   .project-image:hover {
@@ -148,17 +149,19 @@ const documentation = () => {
     list-style-type: disc;
     padding-left: 40px;
     font-size: 20px;
-    color: #2c3e50;
+    color: var(--text-secondary);
     margin: 35px;
     margin-top: 0px;
+    transition: color 0.3s ease;
   }
 
   .left-column h3 {
     text-align: center;
     font-size: 24px;
     margin: 20px 0 10px 0;
-    color: #2c3e50;
+    color: var(--text-primary);
     padding: 8px 0;
+    transition: color 0.3s ease;
   }
 
   /* Right Column */
@@ -168,14 +171,17 @@ const documentation = () => {
     font-size: 20px;
     line-height: 1.8;
     margin-bottom: 20px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
 
   .right-column h2 {
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 2px solid var(--border);
     padding-bottom: 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
 
   .right-column ul {

@@ -41,22 +41,22 @@
   justify-content: flex-start;
   text-decoration-line: none;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px var(--shadow);
+  background: var(--component-blue);
   text-align: center;
   width: 100%;
   max-width: 1000px;
   padding: 20px;
   margin-bottom: 20px;
   flex-wrap: nowrap;
-  border: 1px solid rgba(44, 62, 80, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--navbar-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .cardContainer:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  border: 1px solid #2c3e50;
+  box-shadow: 0 8px 16px var(--shadow);
+  border: 1px solid var(--accent);
 }
 
 .imageSection {
@@ -65,7 +65,7 @@
   align-items: center;
   border-radius: 4px;
   flex: 0 0 150px;
-  color: #2c3e50;
+  color: var(--text-primary);
   padding: 15px;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .descriptionSection p {
-  color: #2c3e50;
+  color: var(--text-secondary);
   text-align: left;
   padding-left: 20px;
   width: 100%;
@@ -87,7 +87,7 @@
   font-size: 22px;
   margin: 0px 0px 10px;
   padding: 0px;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 
 .projectPreview {
@@ -95,8 +95,8 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 4px;
-  border: 1px solid rgba(44, 62, 80, 0.2);
-  transition: transform 0.3s ease;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .projectPreview:hover {
