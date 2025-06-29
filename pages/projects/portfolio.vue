@@ -122,6 +122,11 @@ const documentation = () => {
     border-radius: 5px;
   }
 
+  /* Dark mode button text color override */
+  [data-theme="dark"] .button {
+    color: #000000;
+  }
+
   /* Left Column */
   .left-column {
     display: flex;
