@@ -30,9 +30,18 @@ useHead({
 <style scoped>
 h1 {
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-primary);
   font-size: 48px;
   margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 28px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .projects-background {
@@ -41,8 +50,9 @@ h1 {
   height: 100%;
   width: 100%;
   position: relative;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--bg-gradient);
   overflow: hidden;
+  transition: background 0.3s ease;
 }
 
 .project-overlay {
@@ -62,7 +72,7 @@ h1 {
   margin-top: 40px;
   text-align: center;
   align-items: center;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 
 .filter-wrapper{
@@ -72,9 +82,9 @@ h1 {
 #type-filter {
   padding: 6px 20px;
   border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #2c3e50;
-  border: 2px solid #3498db;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 2px solid var(--accent);
   appearance: none;
   cursor: pointer;
   margin-left: 10px;
@@ -82,14 +92,33 @@ h1 {
 }
 
 #type-filter:hover {
-  border-color: #2980b9;
-  background-color: rgba(255, 255, 255, 1);
+  border-color: var(--accent-hover);
+  background-color: var(--bg-secondary);
 }
 
 #type-filter:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.4);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--shadow);
+}
+
+.project-card h3 {
+  color: var(--text-primary);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px var(--shadow);
 }
 
 @media(max-width: 1120px){

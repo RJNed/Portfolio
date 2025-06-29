@@ -12,8 +12,8 @@
   {
     "id": 2,
     "name": "Calculator",
-    "slug": "Calculator",
-    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "slug": "calculator",
+    "brief": "This site is currently under construction. We're actively working on updates—please check back soon!",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "image": "/images/Placeholder1.png",
     "type": "Software",
@@ -22,8 +22,8 @@
   {
     "id": 3,
     "name": "Placeholder 2",
-    "slug": "Placeholder 2",
-    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "slug": "placeholder-2",
+    "brief": "This site is currently under construction. We're actively working on updates—please check back soon!",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "image": "/images/Placeholder2.png",
     "type": "Software"
@@ -31,8 +31,8 @@
   {
     "id": 4,
     "name": "Placeholder 3",
-    "slug": "Placeholder 3",
-    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "slug": "placeholder-3",
+    "brief": "This site is currently under construction. We're actively working on updates—please check back soon!",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "image": "/images/Placeholder3.png",
     "type": "Lab"
@@ -40,8 +40,8 @@
   {
     "id": 5,
     "name": "Placeholder 4",
-    "slug": "Placeholder 4",
-    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "slug": "placeholder-4",
+    "brief": "This site is currently under construction. We're actively working on updates—please check back soon!",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "image": "/images/Placeholder4.png",
     "type": "Software"
@@ -49,8 +49,8 @@
   {
     "id": 6,
     "name": "Placeholder 5",
-    "slug": "Placeholder 5",
-    "brief": "This site is currently under construction. We’re actively working on updates—please check back soon!",
+    "slug": "placeholder-5",
+    "brief": "This site is currently under construction. We're actively working on updates—please check back soon!",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "image": "/images/Placeholder5.png",
     "type": "Lab"

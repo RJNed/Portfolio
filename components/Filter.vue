@@ -71,16 +71,16 @@
   }
 
   .filter-wrapper label {
-    color: #2c3e50;
+    color: var(--text-primary);
     font-weight: 600;
   }
   
   #type-filter {
     padding: 6px 20px;
     border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #2c3e50;
-    border: 2px solid #2c3e50;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--accent);
     appearance: none;
     cursor: pointer;
     margin-left: 10px;
@@ -88,13 +88,32 @@
   }
   
   #type-filter:hover {
-    border-color: #34495e;
-    background-color: rgba(255, 255, 255, 1);
+    border-color: var(--accent);
+    background-color: var(--bg-secondary);
   }
   
   #type-filter:focus {
     outline: none;
-    border-color: #2c3e50;
-    box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.4);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--shadow);
+  }
+
+  .filter-container {
+    background: var(--component-blue);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--navbar-border);
+    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .filter-container h2 {
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
   }
 </style>

@@ -64,14 +64,18 @@
   
   <style scoped>
   .form-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--component-blue);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px var(--shadow);
     padding: 25px;
     width: 600px;
     height: 100%;
+    border: 1px solid var(--navbar-border);
+    transition: background 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
   }
   form {
+    background-color: var(--component-blue);
+    border: none;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -83,33 +87,46 @@
 
   h2 {
     text-align: center;
+    color: var(--text-primary);
   }
 
   label {
     font-weight: 600;
     margin-bottom: 5px;
+    color: var(--text-primary);
   }
   input,
   textarea {
     padding: 10px;
-    border: 1px solid #aaa;
+    border: 1px solid var(--border);
     border-radius: 5px;
     font-size: 16px;
     font-family: inherit;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary); 
+    transition: border-color 0.1s ease, background-color 0.1s ease;
   }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
   button[type="submit"] {
     padding: 12px;
     font-size: 16px;
-    background-color: #282828;
-    color: #fff;
+    background-color: var(--accent);
+    color: #000000;
     border: none;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   button[type="submit"]:hover {
-    background-color: #444;
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
   }
 
 

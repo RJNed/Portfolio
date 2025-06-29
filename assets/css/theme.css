@@ -1,0 +1,148 @@
+/* Theme CSS Custom Properties */
+
+:root {
+  /* Light Theme Colors */
+  --bg-primary-light: #ffffff;
+  --bg-secondary-light: #f8f9fa;
+  --bg-tertiary-light: #e9ecef;
+  --text-primary-light: #212529;
+  --text-secondary-light: #6c757d;
+  --text-muted-light: #adb5bd;
+  --border-light: #dee2e6;
+  --accent-light: #ffd000;
+  --accent-hover-light: #fda015;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --card-bg-light: #ffffff;
+  --navbar-bg-light: linear-gradient(to bottom, #283e51, #333);
+  --navbar-text-light: #ffffff;
+  --navbar-border-light: #1f2c3b;
+  --component-blue-light: #ffffff;
+  
+  /* Light Theme Gradients */
+  --bg-gradient-light: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --card-gradient-light: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+
+  /* Dark Theme Colors */
+  --bg-primary-dark: #1a1a1a;
+  --bg-secondary-dark: #2d2d2d;
+  --bg-tertiary-dark: #404040;
+  --text-primary-dark: #ffffff;
+  --text-secondary-dark: #b3b3b3;
+  --text-muted-dark: #808080;
+  --border-dark: #404040;
+  --accent-dark: #ffd000;
+  --accent-hover-dark: #fda015;
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --card-bg-dark: #2d2d2d;
+  --navbar-bg-dark: linear-gradient(to bottom, #283e51, #333);
+  --navbar-text-dark: #ffffff;
+  --navbar-border-dark: #1f2c3b;
+  --component-blue-dark: #283e51;
+  
+  /* Dark Theme Gradients (inverted) */
+  --bg-gradient-dark: linear-gradient(135deg, #6c757d 0%, #343a40 100%);
+  --card-gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+
+  /* Default to dark theme */
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --bg-tertiary: var(--bg-tertiary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --text-muted: var(--text-muted-dark);
+  --border: var(--border-dark);
+  --accent: var(--accent-dark);
+  --accent-hover: var(--accent-hover-dark);
+  --shadow: var(--shadow-dark);
+  --card-bg: var(--card-bg-dark);
+  --navbar-bg: var(--navbar-bg-dark);
+  --navbar-text: var(--navbar-text-dark);
+  --navbar-border: var(--navbar-border-dark);
+  --bg-gradient: var(--bg-gradient-dark);
+  --card-gradient: var(--card-gradient-dark);
+  --component-blue: var(--component-blue-dark);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --bg-tertiary: var(--bg-tertiary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --text-muted: var(--text-muted-light);
+  --border: var(--border-light);
+  --accent: var(--accent-light);
+  --accent-hover: var(--accent-hover-light);
+  --shadow: var(--shadow-light);
+  --card-bg: var(--card-bg-light);
+  --navbar-bg: var(--navbar-bg-light);
+  --navbar-text: var(--navbar-text-light);
+  --navbar-border: var(--navbar-border-light);
+  --bg-gradient: var(--bg-gradient-light);
+  --card-gradient: var(--card-gradient-light);
+  --component-blue: var(--component-blue-light);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --bg-tertiary: var(--bg-tertiary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --text-muted: var(--text-muted-dark);
+  --border: var(--border-dark);
+  --accent: var(--accent-dark);
+  --accent-hover: var(--accent-hover-dark);
+  --shadow: var(--shadow-dark);
+  --card-bg: var(--card-bg-dark);
+  --navbar-bg: var(--navbar-bg-dark);
+  --navbar-text: var(--navbar-text-dark);
+  --navbar-border: var(--navbar-border-dark);
+  --bg-gradient: var(--bg-gradient-dark);
+  --card-gradient: var(--card-gradient-dark);
+  --component-blue: var(--component-blue-dark);
+}
+
+/* Smooth transitions for theme changes */
+/* Removed global transition to fix slow fade issue */
+
+/* Base styles using CSS variables */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: all 0.1s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-secondary);
+  transform: scale(1.1);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-icon {
+  font-size: 20px;
+  transition: transform 0.1s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: rotate(180deg);
+} 

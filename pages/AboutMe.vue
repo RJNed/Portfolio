@@ -110,8 +110,8 @@ useHead({
 
 <style scoped>
 header {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-  color: #fff;
+  background: var(--accent);
+  color: #000000;
   text-align: center;
   padding: 20px;
 }
@@ -119,33 +119,36 @@ header {
 header h1 {
   margin: 0;
   font-size: 48px;
+  color: #000000;
 }
 
 header p {
   margin: 0;
   padding-top: 10px;
   font-size: 20px;
+  color: #000000;
 }
 
 h2 {
-  color: #2c3e50;
+  color: var(--text-primary);
   text-align: center;
   font-size: 28px;
-  border-bottom: 2px solid #2c3e50;
+  border-bottom: 2px solid var(--border);
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
 .team {
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px var(--shadow);
+  background: var(--card-bg);
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   max-width: 900px;
+  border: 1px solid var(--border);
 }
 
 .team-member {
@@ -157,7 +160,7 @@ h2 {
 .team-member img {
   width: 90%;
   border-radius: 50%;
-  border: 2px solid #3498db;
+  border: 2px solid var(--accent);
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
@@ -167,13 +170,13 @@ h2 {
 }
 
 .team-member h3 {
-  color: #2c3e50;
+  color: var(--text-primary);
   font-size: 24px;
   margin-bottom: 15px;
 }
 
 .team-member p {
-  color: #2c3e50;
+  color: var(--text-secondary);
   text-align: center;
   font-size: 16px;
   line-height: 1.6;
@@ -182,7 +185,7 @@ h2 {
 .team:hover {
   transform: translateY(-5px);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px var(--shadow);
 }
 
 .background-container {
@@ -193,7 +196,8 @@ h2 {
   min-height: 100vh;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--bg-gradient);
+  transition: background 0.3s ease;
 }
 
 .content-container {
@@ -215,7 +219,7 @@ h2 {
   align-items: center;
   max-width: 300px;
   padding: 5px 10px 10px 0;
-  color: black;
+  color: var(--text-primary);
 }
 
 .rightSection {
@@ -223,26 +227,27 @@ h2 {
   min-width: 300px;
   padding: 5px;
   border-radius: 8px;
-  color: black;
+  color: var(--text-primary);
   text-align: left;
 }
 
 .rightBackground {
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--card-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow);
   padding: 25px;
+  border: 1px solid var(--border);
 }
 
 .rightContent {
-  color: #000;
+  color: var(--text-primary);
   padding: 20px;
   text-align: left;
 }
 
 .rightContent h2 {
-  color: #22345f;
-  border-bottom: 2px solid #000;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border);
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -254,6 +259,7 @@ h2 {
 
 .skills-list li {
   padding: 5px 0;
+  color: var(--text-secondary);
 }
 
 .job {
@@ -262,16 +268,17 @@ h2 {
 
 .job h3 {
   margin-bottom: 5px;
-  color: #22345f;
+  color: var(--text-primary);
 }
 
 .job p {
   font-style: italic;
-  color: #1c1c1c;
+  color: var(--text-secondary);
 }
 
 .job ul {
   padding-left: 20px;
+  color: var(--text-secondary);
 }
 
 /* Mobile & tablet responsiveness */

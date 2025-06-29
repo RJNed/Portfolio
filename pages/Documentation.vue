@@ -29,11 +29,20 @@ import Filter from '~/components/Filter.vue';
 </script>
 
 <style scoped>
-h1{
-    text-align: center;
-    color: #2c3e50;
-    font-size: 48px;
-    margin-bottom: 30px;
+h1 {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 28px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .doc-background {
@@ -42,8 +51,9 @@ h1{
   height: 100%;
   width: 100%;
   position: relative;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--bg-gradient);
   overflow: hidden;
+  transition: background 0.3s ease;
 }
 
 .doc-layout {
@@ -63,7 +73,7 @@ h1{
   margin-top: 40px;
   text-align: center;
   align-items: center;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 
 @media(max-width: 1120px){

@@ -230,23 +230,26 @@ useHead({
     height: 100%;
     width: 100%;
     position: relative;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: var(--bg-gradient);
     overflow: hidden;
+    transition: background 0.3s ease;
   }
 
   .project-details {
     width: 90vw;
     max-width: 1600px;
     margin: 0 auto;
-    color: #2c3e50;
+    color: var(--text-primary);
     z-index: 1;
+    transition: color 0.3s ease;
   }
 
   .project-title {
     text-align: center;
     font-size: 48px;
     margin-bottom: 50px;
-    color: #2c3e50;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
 
   .content-grid {
@@ -270,8 +273,8 @@ useHead({
     border-radius: 10px;
     margin: 50px;
     margin-top: 0px;
-    transition: transform 0.3s ease;
-    border: 1px solid #3498db;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--accent);
   }
 
   .project-image:hover {
@@ -282,23 +285,26 @@ useHead({
     list-style-type: none;
     padding-left: 0;
     font-size: 18px;
-    color: #2c3e50;
+    color: var(--text-secondary);
     margin: 35px;
     margin-top: 0px;
+    transition: color 0.3s ease;
   }
 
   .tech-list li {
     margin-bottom: 10px;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.3s ease;
   }
 
   .left-column h3 {
     text-align: center;
     font-size: 24px;
     margin: 0px 0 10px 0;
-    color: #2c3e50;
+    color: var(--text-primary);
     padding: 8px 0;
+    transition: color 0.3s ease;
   }
 
   /* Right Column */
@@ -307,6 +313,8 @@ useHead({
     min-width: 400px;
     font-size: 18px;
     line-height: 1.8;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
 
   .content-section {
@@ -314,19 +322,21 @@ useHead({
   }
 
   .content-section h2 {
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 28px;
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 2px solid var(--border);
     padding-bottom: 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
 
   .content-section h3 {
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-top: 25px;
     margin-bottom: 15px;
     font-size: 22px;
+    transition: color 0.3s ease;
   }
 
   .content-section p {
@@ -344,7 +354,8 @@ useHead({
   }
 
   .content-section strong {
-    color: #2c3e50;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
 
   /* Optional: improve large screen appearance */

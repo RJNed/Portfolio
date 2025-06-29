@@ -29,29 +29,36 @@
   <style scoped>
 
   .contact-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--component-blue);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px var(--shadow);
     padding: 25px;
     width: 400px;
     max-width: 600px;
     min-height: 100%;
+    border: 1px solid var(--navbar-border);
+    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
   
   .contact-info {
-    color: #000;
+    color: var(--text-primary);
     font-size: 18px;
     font-weight: 500;
     line-height: 1.6;
   }
   
   .contact-info a {
-    color: #000;
+    color: var(--accent);
     text-decoration: underline;
+  }
+
+  .contact-info a:hover {
+    color: var(--accent-hover);
   }
 
   h2 {
     text-align: center;
+    color: var(--text-primary);
   }
   
   .social-links {
@@ -64,17 +71,18 @@
   .social-links a {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #f0f0f0;
-    color: #000;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
     border-radius: 6px;
     text-align: center;
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid var(--border);
   }
   
   .social-links a:hover {
-    background-color: #dcdcdc;
+    background-color: var(--bg-tertiary);
     transform: translateY(-2px);
   }
   
