@@ -1,25 +1,34 @@
-<!-- This is a slug for the placeholder projects. It is not used in the actual project. -->
 <template>
-  <div class ="background">
-    <div class="project-details" v-if="project">
-      <h1 class="project-title">{{ project.name }}</h1>
+  <div class="background">
+    <div class="project-details">
+      <h1 class="project-title">Calculator</h1>
 
       <div class="content-grid">
         <!-- Left Column -->
         <div class="left-column">
           <img
-            :src="project.image"
-            :alt="`Project image for ${project.name}`"
+            src="/images/Placeholder1.png"
+            alt="Calculator project image"
             class="project-image"
           />
+          <h3>Tech Stack</h3>
           <ul class="tech-list">
-            <li v-for="(item, index) in project.tech" :key="index">{{ item }}</li>
+            <li>HTML</li>
+            <li>JavaScript</li>
+            <li>CSS</li>
           </ul>
         </div>
 
         <!-- Right Column -->
         <div class="right-column">
-          <p>{{ project.description }}</p>
+          <h2>Project Overview</h2>
+          <p>This site is currently under construction. We're actively working on updates—please check back soon!</p>
+          
+          <h2>About This Project</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          
+          <h2>Coming Soon</h2>
+          <p>This project is in development. Check back later for updates!</p>
         </div>
       </div>
     </div>
@@ -27,28 +36,15 @@
 </template>
 
 <script setup>
-import { useRoute, useError } from 'nuxt/app'
-import projects from '~/data/projects.json'
-
-const route = useRoute()
-const error = useError()
-
-const slug = route.params.slug
-const project = projects.find(project => project.slug === slug)
-
-if (!project) {
-  error({ statusCode: 404, message: 'Project not found' })
-} else {
-  useHead({
-    title: `${project.name} | Ryan Nedbalek`,
-    meta: [
-      { name: 'description', content: project.description },
-      { property: 'og:title', content: project.name },
-      { property: 'og:description', content: project.description },
-      { property: 'og:image', content: project.image }
-    ]
-  })
-}
+useHead({
+  title: 'Calculator | Ryan Nedbalek',
+  meta: [
+    { name: 'description', content: 'Calculator project - currently under construction.' },
+    { property: 'og:title', content: 'Calculator | Ryan Nedbalek' },
+    { property: 'og:description', content: 'Calculator project - currently under construction.' },
+    { property: 'og:image', content: '/images/Placeholder1.png' }
+  ]
+})
 </script>
   
 <style scoped>
@@ -115,12 +111,35 @@ if (!project) {
     margin-top: 0px;
   }
 
+  .left-column h3 {
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+    color: #2c3e50;
+  }
+
   /* Right Column */
   .right-column {
     flex: 2;
     min-width: 400px;
     font-size: 20px;
     line-height: 1.8;
+  }
+
+  .right-column h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+  }
+
+  .right-column ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .right-column li {
+    margin-bottom: 8px;
   }
 
 /* Optional: improve large screen appearance */
@@ -164,10 +183,5 @@ if (!project) {
   .project-title {
     font-size: 36px;
   }
-
-  .background{
-    height: 100%;
-  }
 }
-</style>
-  
+</style> 

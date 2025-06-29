@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/Projects/${slug}`" class="cardContainer">
+  <NuxtLink :to="`/projects/${slug}`" class="cardContainer">
     <div class="imageSection">
       <h3 class="projectName">{{ name }}</h3>
       <img :src="image" :alt="name" class="projectPreview" />
@@ -43,21 +43,22 @@ defineProps({
   align-items: center;
   text-decoration-line: none;
   border-radius: 8px;
-  /* border: 2px solid rgb(250, 235, 215, 0.4); */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
   text-align: center;
   width: 100%;
   max-width: 1000px;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 20px;
-  flex-wrap: nowrap; /* prevent premature wrap */
+  flex-wrap: nowrap;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .cardContainer:hover {
-  transform: translateY(-10px);
-  transition: all 0.5s ease;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #2c3e50;
 }
 
 .imageSection {
@@ -66,27 +67,29 @@ defineProps({
   align-items: center;
   border-radius: 4px;
   flex: 0 0 150px;
-  color: rgb(17, 18, 18);
-  padding: 15px
+  color: #2c3e50;
+  padding: 15px;
 }
 
 .descriptionSection {
   flex: 1 1 0%;
   min-width: 0;
-  padding-right: 30px
+  padding-right: 30px;
 }
 
 .descriptionSection p {
-  color: rgb(16, 16, 16);
+  color: #2c3e50;
   text-align: left;
   padding-left: 20px;
   width: 100%;
+  line-height: 1.6;
 }
 
 .imageSection h3 {
   font-size: 22px;
   margin: 0px 0px 10px;
   padding: 0px;
+  color: #2c3e50;
 }
 
 .projectPreview {
@@ -94,12 +97,18 @@ defineProps({
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 4px;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.projectPreview:hover {
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .cardContainer {
-    width:95%;
+    width: 95%;
     flex-direction: column;
     text-align: center;
   }
@@ -108,7 +117,7 @@ defineProps({
   .descriptionSection {
     width: 100%;
     text-align: center;
-    padding: 5px
+    padding: 5px;
   }
 
   .descriptionSection p {

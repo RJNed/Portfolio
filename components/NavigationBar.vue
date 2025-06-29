@@ -21,10 +21,10 @@
     <!-- Nav Links (Always at the bottom for mobile) -->
     <ul class="nav-links" :class="{ open: isMenuOpen }">
       <li><a href="/">Featured</a></li>
-      <li><a href="/Projects">Projects</a></li>
-      <li><a href="/Documentation">Documentation</a></li>
-      <li><a href="/AboutMe">About Me</a></li>
-      <li><a href="/Contact-Page">Contact</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/documentation">Documentation</a></li>
+      <li><a href="/aboutme">About Me</a></li>
+      <li><a href="/contact-page">Contact</a></li>
     </ul>
   </nav>
 </template>

@@ -3,13 +3,11 @@
       "id": 1,
       "name": "Portfolio Website",
       "slug": "portfolio",
-      "brief": "Documentation for my Nuxt-based portfolio website",
+      "brief": "A fast, clean portfolio site hosted on Vercel—built with Vue 3 and Nuxt.js to showcase technical projects and documentation.",
       "description": "This site is a collection of my projects, split into two main areas: Software and Lab work. The Software Projects cover coding with tools like Vue 3, Nuxt.js, Node.js, TypeScript, Python, and SQL. The Lab Projects are hands-on builds—things like 3D printing, CAD models, electronics, IoT devices, and home networking setups. Each project page gives an brief overview of what the project is. Documentation breaks down what I made, how I built it, and includes planning notes, documentation, code, and pictures. The goal is to show real, practical skills—building things that work, both in software and in the physical world.",
       "image": "/images/fotis-fotopoulos-unsplash.jpg",
       "type": "Software",
-      "tech": ["Frontend: Vue3+Nuxt", "Backend: Node.js+Express", "Scripting Language: Typescript", "Styling: CSS", "Hosting: Vercel", "Reposistory: GitHub"],
-      "goal": "Primary goal of this project is to deepen my understanding of the software development life cycle. Organizing and breaking down challenges into managable tasks to ultimately create a finished product. In doing so, the finished product would be a platform of my own design to share future projects with the world.",
-      "features": ["Project Showcasing", "Search and Filtering", "Contact Form", "Routing and Navigation", "SEO support", "Reusable components", "HTTPS and secure environment variable handling"]
+      "tech": ["Frontend: Vue3+Nuxt", "Backend: Node.js+Express", "Scripting Language: Typescript", "Styling: CSS", "Hosting: Vercel", "Reposistory: GitHub"]
     },
     {
       "id": 2,

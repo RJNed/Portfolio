@@ -1,10 +1,10 @@
 <template>
-  <div class="background-container">
-    <div class="content-container">
-      <ContactInfoCard />
-      <ContactForm />
+    <div class="background-container">
+      <div class="content-container">
+        <ContactInfoCard />
+        <ContactForm />
+      </div>
     </div>
-  </div>
 </template>
 
 <script setup>
@@ -35,19 +35,7 @@ useHead({
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background-color: #282828;
-}
-
-.background-container::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('/images/pexels.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.25;
-  background-attachment: fixed;
-  z-index: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .content-container {
@@ -69,7 +57,6 @@ useHead({
     align-items: center;
     margin-top: 50px;
   }
-
 }
 
 @media (max-width: 525px) {
@@ -78,8 +65,5 @@ useHead({
     align-items: center;
     margin-top: 50px;
   }
-
 }
-
-
 </style>

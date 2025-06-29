@@ -96,9 +96,9 @@
 useHead({
   title: 'About Me | Ryan Nedbalek',
   meta: [
-    { name: 'description', content: 'Learn about Ryan Nedbalek’s background, interests, and professional journey.' },
+    { name: 'description', content: 'Learn about Ryan Nedbalek\'s background, interests, and professional journey.' },
     { property: 'og:title', content: 'About Me | Ryan Nedbalek' },
-    { property: 'og:description', content: 'Discover Ryan’s personal story, education, and experience.' },
+    { property: 'og:description', content: 'Discover Ryan\'s personal story, education, and experience.' },
     { property: 'og:image', content: '/images/portfolio-icon.png' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
@@ -110,7 +110,7 @@ useHead({
 
 <style scoped>
 header {
-  background-color: #22345f;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -118,54 +118,71 @@ header {
 
 header h1 {
   margin: 0;
+  font-size: 48px;
 }
 
 header p {
   margin: 0;
   padding-top: 10px;
+  font-size: 20px;
 }
 
 h2 {
-  color: #fcfcc0;
+  color: #2c3e50;
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .team {
-  padding: 5px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   max-width: 900px;
-  margin: 0 auto;
 }
 
 .team-member {
   text-align: center;
   max-width: 250px;
+  padding: 10px;
 }
 
 .team-member img {
   width: 90%;
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 2px solid #3498db;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05);
+}
+
+.team-member h3 {
+  color: #2c3e50;
+  font-size: 24px;
   margin-bottom: 15px;
 }
 
-.team:hover {
-  transform: translateY(-10px);
-  transition: all 0.5s ease;
+.team-member p {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-p {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
+.team:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .background-container {
@@ -176,19 +193,7 @@ p {
   min-height: 100vh;
   align-items: center;
   overflow: hidden;
-  background-color: #282828;
-}
-
-.background-container::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('/images/pexels.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.25;
-  background-attachment: fixed;
-  z-index: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .content-container {
@@ -206,10 +211,10 @@ p {
 }
 
 .whoSection {
-  flex: 1 1 100%;
-  max-width: 250px;
-  margin: 0 auto;
-  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  padding: 5px 10px 10px 0;
   color: black;
 }
 
