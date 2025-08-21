@@ -87,6 +87,7 @@ const isMenuOpen = ref(false);
   gap: 40px;
   margin: 10px;
   padding: 5px;
+  background-color: var(--navbar-bg);
 }
 
 .nav-links li a {
@@ -140,7 +141,7 @@ const isMenuOpen = ref(false);
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--bg-secondary);
+    background-color: var(--shadow);
     padding: 10px 0;
     border-top: 1px solid var(--border);
     order: 4;
