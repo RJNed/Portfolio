@@ -7,29 +7,38 @@
         <!-- Left Column -->
         <div class="left-column">
           <img
-            src="/images/Placeholder1.png"
+            src="/images/password.png"
             alt="Password Generator image"
             class="project-image"
           />
+          <button class="button" @click="documentation">Go to Documentation</button>
           <h3>Tech Stack</h3>
           <ul class="tech-list">
-            <li>HTML</li>
-            <li>JavaScript</li>
-            <li>CSS</li>
-            <a href="https://passwordgenesis.com" target="_blank">View Password Generator</a>
+            <li>Frontend: HTML</li>
+            <li>Scripting Language: JavaScript</li>
+            <li>Styling: CSS</li>
+            <li>Hosting: Vercel</li>
+            <li>Repository: <a href="https://github.com/RJNed/PasswordGenesis" target="_blank">GitHub</a></li>
+            <li><a href="https://passwordgenesis.com" target="_blank">Visit Password Genesis</a></li>
           </ul>
         </div>
 
         <!-- Right Column -->
         <div class="right-column">
           <h2>Project Overview</h2>
-          <p>This site is currently under construction. We're actively working on updates—please check back soon!</p>
+          <p>Web-based modern password generator project</p>
           
           <h2>About This Project</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>This project is a web application built with JavaScript, HTML, and CSS that generates strong, random passwords. 
+            It serves as both a practice in front-end development and an exploration of cybersecurity concepts, particularly secure password creation, and crypotgraphically secure random algorithms/libraries.
+            In addition to generating passwords, the site provides educational resources and FAQs to help users understand password management best practices, 
+            combining technical implementation with practical security awareness.
+          </p>
           
-          <h2>Coming Soon</h2>
-          <p>This project is in development. Check back later for updates!</p>
+          <h2>Goals</h2>
+          <p>This project showcases my skills in JavaScript, HTML, and CSS while exploring cybersecurity concepts and addressing common questions about password management.</p>
+          <p>Beyond a simple interface, I focused on validation often overlooked by other password sites. Since sliders can be tampered with, I added safeguards in the JavaScript logic to enforce true limits and prevent overloads.</p>
+
         </div>
       </div>
     </div>
@@ -45,7 +54,12 @@ useHead({
     { property: 'og:description', content: 'Password Generator - Genesis of passwords.' },
     { property: 'og:image', content: '/images/Placeholder1.png' }
   ]
-})
+});
+
+const documentation = () => {
+  navigateTo("/documents/passwordgenesis")
+}
+
 </script>
   
 <style scoped>
