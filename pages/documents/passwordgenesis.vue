@@ -16,7 +16,7 @@
             <li>HTML</li>
             <li>JavaScript</li>
             <li>CSS</li>
-            <a href="https://github.com/RJNed/PasswordGenesis">Go to Github</a>
+            <a href="https://github.com/RJNed/PasswordGenesis" target="_blank">Go to Github</a>
           </ul>
         </div>
 
@@ -52,7 +52,7 @@ useHead({
   .background {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
     background: var(--bg-gradient);

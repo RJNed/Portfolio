@@ -21,14 +21,6 @@
     <div class="hamburger" @click="isMenuOpen = !isMenuOpen">
       ☰
     </div>
-
-    <!-- Theme Toggle -->
-    <ThemeToggle class="theme-toggle-nav" />
-
-    <!-- Hamburger for Mobile -->
-    <div class="hamburger" @click="isMenuOpen = !isMenuOpen">
-      ☰
-    </div>
   </nav>
 </template>
 
@@ -44,13 +36,7 @@ const isMenuOpen = ref(false);
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: center;
   flex-wrap: wrap;
-  background: var(--navbar-bg);
-  box-shadow: inset 1px 1px 3px var(--shadow),
-              inset -1px -1px 3px var(--shadow),
-              2px 2px 5px var(--shadow);
-  border: 1px solid var(--navbar-border);
   background: var(--navbar-bg);
   box-shadow: inset 1px 1px 3px var(--shadow),
               inset -1px -1px 3px var(--shadow),
@@ -59,13 +45,10 @@ const isMenuOpen = ref(false);
   padding: 10px 20px;
   gap: 20px;
   position: relative;
-  position: relative;
 }
 
 /* Brand Logo */
 .brand {
-  position: absolute;
-  left: 20px;
   position: absolute;
   left: 20px;
 }
@@ -83,10 +66,6 @@ const isMenuOpen = ref(false);
 .theme-toggle-nav {
   position: absolute;
   right: 20px;
-/* Theme Toggle */
-.theme-toggle-nav {
-  position: absolute;
-  right: 20px;
 }
 
 /* Hamburger */
@@ -94,10 +73,7 @@ const isMenuOpen = ref(false);
   display: none;
   font-size: 28px;
   color: var(--navbar-text);
-  color: var(--navbar-text);
   cursor: pointer;
-  position: absolute;
-  right: 60px;
   position: absolute;
   right: 60px;
 }
@@ -111,13 +87,10 @@ const isMenuOpen = ref(false);
   gap: 40px;
   margin: 10px;
   padding: 5px;
-  margin: 10px;
-  padding: 5px;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: var(--navbar-text);
   color: var(--navbar-text);
   font-weight: bold;
   font-size: 22px;
@@ -127,22 +100,20 @@ const isMenuOpen = ref(false);
   transition: transform 0.3s ease;
   text-decoration: underline;
   color: var(--accent);
-  color: var(--accent);
 }
 
 @media (max-width: 1120px){
   .nav-links {
-  gap: 20px;
+    gap: 20px;
   }
   .nav-links li a {
-  font-size: 18px;
-}
+    font-size: 18px;
+  }
 }
 
 /* Responsive Layout */
 @media (max-width: 945px) {
   .navbar {
-    justify-content: space-between;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
@@ -150,12 +121,9 @@ const isMenuOpen = ref(false);
 
   .brand {
     position: static;
-    position: static;
     order: 1;
   }
 
-  .theme-toggle-nav {
-    position: static;
   .theme-toggle-nav {
     position: static;
     order: 2;
@@ -163,7 +131,6 @@ const isMenuOpen = ref(false);
 
   .hamburger {
     display: block;
-    position: static;
     position: static;
     order: 3;
     padding-left: 10px;
@@ -175,7 +142,6 @@ const isMenuOpen = ref(false);
     width: 100%;
     background-color: var(--navbar-bg);
     padding: 10px 0;
-    border-top: 1px solid var(--border);
     border-top: 1px solid var(--border);
     order: 4;
   }
