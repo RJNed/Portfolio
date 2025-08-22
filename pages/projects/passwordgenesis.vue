@@ -1,14 +1,14 @@
 <template>
   <div class="background">
     <div class="project-details">
-      <h1 class="project-title">Calculator</h1>
+      <h1 class="project-title">Password Generator</h1>
 
       <div class="content-grid">
         <!-- Left Column -->
         <div class="left-column">
           <img
             src="/images/Placeholder1.png"
-            alt="Calculator project image"
+            alt="Password Generator image"
             class="project-image"
           />
           <h3>Tech Stack</h3>
@@ -16,6 +16,7 @@
             <li>HTML</li>
             <li>JavaScript</li>
             <li>CSS</li>
+            <a href="https://passwordgenesis.com" target="_blank">View Password Generator</a>
           </ul>
         </div>
 
@@ -37,11 +38,11 @@
 
 <script setup>
 useHead({
-  title: 'Calculator | Ryan Nedbalek',
+  title: 'Password Generator | Ryan Nedbalek',
   meta: [
-    { name: 'description', content: 'Calculator project - currently under construction.' },
-    { property: 'og:title', content: 'Calculator | Ryan Nedbalek' },
-    { property: 'og:description', content: 'Calculator project - currently under construction.' },
+    { name: 'description', content: 'Password Generator with a modern style to showcase solely HTML, JS, and CSS knowledge.' },
+    { property: 'og:title', content: 'Password Generator | Ryan Nedbalek' },
+    { property: 'og:description', content: 'Password Generator - Genesis of passwords.' },
     { property: 'og:image', content: '/images/Placeholder1.png' }
   ]
 })
@@ -51,7 +52,7 @@ useHead({
   .background {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
     background: var(--bg-gradient);

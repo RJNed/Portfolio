@@ -104,11 +104,11 @@ const isMenuOpen = ref(false);
 
 @media (max-width: 1120px){
   .nav-links {
-  gap: 20px;
+    gap: 20px;
   }
   .nav-links li a {
-  font-size: 18px;
-}
+    font-size: 18px;
+  }
 }
 
 /* Responsive Layout */
@@ -140,7 +140,7 @@ const isMenuOpen = ref(false);
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--bg-secondary);
+    background-color: var(--navbar-bg);
     padding: 10px 0;
     border-top: 1px solid var(--border);
     order: 4;
