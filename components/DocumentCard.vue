@@ -33,7 +33,7 @@
   </script>
   
   <style scoped>
-  .cardContainer {
+.cardContainer {
   position: relative;
   z-index: 1;
   display: flex;
@@ -47,7 +47,7 @@
   width: 100%;
   max-width: 1000px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   flex-wrap: nowrap;
   border: 1px solid var(--navbar-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
@@ -106,21 +106,33 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .cardContainer {
-    width: 95%;
+    width: 90%;
     flex-direction: column;
-    text-align: center;
+    margin: 0 auto 20px auto;
+    padding: 15px;
   }
 
-  .imageSection,
+  .imageSection {
+    width: 100%;
+    padding: 10px;
+    flex: none;
+  }
+
   .descriptionSection {
     width: 100%;
-    text-align: center;
-    padding: 5px;
+    padding: 10px 0;
   }
 
   .descriptionSection p {
     padding-left: 0;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardContainer {
+    width: 95%;
+    padding: 10px;
   }
 }
 </style>
