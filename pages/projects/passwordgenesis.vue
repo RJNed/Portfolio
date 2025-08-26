@@ -7,31 +7,34 @@
         <!-- Left Column -->
         <div class="left-column">
           <img
-            src="/images/Placeholder1.png"
+            src="/images/password.png"
             alt="Password Generator image"
             class="project-image"
           />
           <h3>Tech Stack</h3>
           <ul class="tech-list">
             <li>HTML</li>
-            <li>JavaScript</li>
-            <li>CSS</li>
-            <a href="https://passwordgenesis.com" target="_blank">View Password Generator</a>
+            <li>Scripting Language: JavaScript</li>
+            <li>Styling: CSS</li>
+            <li>Hosting: Vercel</li>
+            <li>Repository:<a href="https://github.com/RJNed/PasswordGenesis" target="_blank">Github</a></li>
           </ul>
+          <button class="button" @click="documentation">Go to Documentation</button>
         </div>
 
         <!-- Right Column -->
         <div class="right-column">
           <h2>Project Overview</h2>
-          <p>This site is currently under construction. We're actively working on updates—please check back soon!</p>
+          <p>Modern password generator and cybersecurity web application project</p>
           
           <h2>About This Project</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>This project is a web application built with JavaScript, HTML, and CSS that generates strong and randomized passwords. It serves as both a practice in front-end development and an exploration of cybersecurity concepts, particularly secure password creation. In addition to generating passwords, the site provides educational resources to help users understand password management best practices, combining technical implementation with practical security awareness.</p>
           
-          <h2>Coming Soon</h2>
-          <p>This project is in development. Check back later for updates!</p>
+          <h2>Goals</h2>
+            <p>This project showcases my skills in JavaScript, HTML, and CSS while exploring cybersecurity concepts and addressing common questions about password management.</p>
+            <p>Beyond a simple interface, I focused on validation often overlooked by other password sites. Since sliders can be tampered with, I added safeguards in the JavaScript logic to enforce true limits and prevent overloads.</p>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -46,6 +49,11 @@ useHead({
     { property: 'og:image', content: '/images/Placeholder1.png' }
   ]
 })
+
+const documentation = () => {
+  navigateTo('/documents/passwordgenesis')
+}
+
 </script>
   
 <style scoped>
@@ -85,8 +93,36 @@ useHead({
     flex-wrap: wrap;
   }
 
+  .button {
+    background-color: var(--accent);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+  }
+
+  /* Dark mode button text color override */
+  [data-theme="dark"] .button {
+    color: #000000;
+  }
+
   /* Left Column */
   .left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 1;
     min-width: 350px;
     max-width: 600px;
@@ -96,8 +132,7 @@ useHead({
     width: 80%;
     height: auto;
     border-radius: 10px;
-    margin: 50px;
-    margin-top: 0px;
+    margin: 0px;
     transition: transform 0.3s ease, border-color 0.3s ease;
     border: 1px solid var(--border);
   }
@@ -117,9 +152,11 @@ useHead({
   }
 
   .left-column h3 {
+    text-align: center;
     font-size: 24px;
     margin: 20px 0 10px 0;
     color: var(--text-primary);
+    padding: 8px 0;
     transition: color 0.3s ease;
   }
 
@@ -129,6 +166,7 @@ useHead({
     min-width: 400px;
     font-size: 20px;
     line-height: 1.8;
+    margin-bottom: 20px;
     color: var(--text-primary);
     transition: color 0.3s ease;
   }
@@ -178,7 +216,6 @@ useHead({
 
   .left-column{
     text-align: center;
-    margin-right: 25px;
   }
 
   .left-column ul{
