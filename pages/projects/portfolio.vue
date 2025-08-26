@@ -11,7 +11,6 @@
             alt="Portfolio website project image"
             class="project-image"
           />
-          <button class="button" @click="documentation">Go to Documentation</button>
           <h3>Tech Stack</h3>
           <ul class="tech-list">
             <li>Frontend: Vue 3 + Nuxt.js</li>
@@ -21,6 +20,7 @@
             <li>Hosting: Vercel</li>
             <li>Repository: GitHub</li>
           </ul>
+          <button class="button" @click="documentation">Go to Documentation</button>
         </div>
 
         <!-- Right Column -->
@@ -141,7 +141,7 @@ const documentation = () => {
     width: 80%;
     height: auto;
     border-radius: 10px;
-    margin: 0 0 20px 0;
+    margin: 0px;
     transition: transform 0.3s ease, border-color 0.3s ease;
     border: 1px solid var(--border);
   }
@@ -225,7 +225,6 @@ const documentation = () => {
 
   .left-column{
     text-align: center;
-    margin-right: 25px;
   }
 
   .left-column ul{
