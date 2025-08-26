@@ -50,7 +50,7 @@ defineProps({
   width: 100%;
   max-width: 1000px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   flex-wrap: nowrap;
   border: 1px solid var(--navbar-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
@@ -109,16 +109,21 @@ defineProps({
 /* Responsive Design */
 @media (max-width: 768px) {
   .cardContainer {
-    width: 95%;
+    width: 90%;
     flex-direction: column;
-    text-align: center;
+    margin: 0 auto 20px auto;
+    padding: 15px;
   }
 
-  .imageSection,
+  .imageSection {
+    width: 100%;
+    padding: 10px;
+    flex: none;
+  }
+
   .descriptionSection {
     width: 100%;
-    text-align: center;
-    padding: 5px;
+    padding: 10px 0;
   }
 
   .descriptionSection p {
@@ -127,22 +132,10 @@ defineProps({
   }
 }
 
-.project-card h3 {
-  color: var(--text-primary);
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.project-card p {
-  color: var(--text-secondary);
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.project-card a {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: bold;
+@media (max-width: 480px) {
+  .cardContainer {
+    width: 95%;
+    padding: 10px;
+  }
 }
 </style>
