@@ -87,7 +87,7 @@ watchEffect(() => {
   }
 
   .project-details {
-    width: 90vw;
+    width: 100vw;
     max-width: 1600px;
     margin: 0 auto;
     color: var(--text-primary);

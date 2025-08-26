@@ -13,11 +13,11 @@
     "id": 2,
     "name": "Password Genesis",
     "slug": "Passwordgenesis",
-    "brief": "Modern Password Generator Web Application",
+    "brief": "Modern password generator and cybersecurity web application project",
     "description": "A web app built with JavaScript, HTML, and CSS to generate secure passwords based on user-selected criteria. The project highlights both front-end development skills and cybersecurity principles, while also educating users on password best practices through FAQs and guidance on password management.",
     "image": "/images/password.png",
     "type": "Software",
-    "tech": ["HTML, Javascript, CSS"]
+    "tech": ["Frontend: HTML", "Scripting Language: JavaScript", "Styling: CSS", "Hosting: Vercel", "Reposistory: GitHub"]
   },
   {
     "id": 3,
