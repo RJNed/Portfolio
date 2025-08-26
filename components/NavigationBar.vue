@@ -87,6 +87,7 @@ const isMenuOpen = ref(false);
   gap: 40px;
   margin: 10px;
   padding: 5px;
+  background-color: var(--navbar-bg);
 }
 
 .nav-links li a {
